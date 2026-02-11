@@ -1,0 +1,26 @@
+# Core dependencies for ETL Pipeline
+pandas>=2.1.0
+numpy>=1.24.0
+pydantic>=2.0.0
+pydantic-settings>=2.0.0
+
+# Vector Database
+qdrant-client>=1.6.0
+
+# Embeddings - High Performance Open Source
+fastembed>=0.2.0
+
+# Data Processing & Utilities
+python-dotenv>=1.0.0
+tqdm>=4.65.0
+loguru>=0.7.0
+
+# Optional: For advanced text preprocessing
+unidecode>=1.3.6
+regex>=2023.8.8
+
+# Development & Testing
+pytest>=7.4.0
+pytest-asyncio>=0.21.0
+black>=23.7.0
+isort>=5.12.0
