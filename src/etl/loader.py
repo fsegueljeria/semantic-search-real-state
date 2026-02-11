@@ -5,6 +5,8 @@ ETL Pipeline Loader
 Batch processing pipeline for loading real estate data into Qdrant.
 """
 
+import csv
+import io
 import uuid
 import sys
 from typing import Iterator, List, Dict, Any
@@ -65,27 +67,67 @@ class ETLLoader:
         
         return success
     
+    @staticmethod
+    def _parse_csv_row(line: str, header: List[str]) -> Dict[str, Any]:
+        """
+        Parse a CSV data line where the entire row is wrapped in one pair of double quotes.
+        Strips outer quotes and parses inner content; reassembles IMAGES and DESCRIPCION
+        when the inner parse yields extra columns (from commas inside those fields).
+        """
+        line = line.rstrip("\n\r")
+        if not line or len(line) < 2 or line[0] != '"' or line[-1] != '"':
+            return {}
+        inner = line[1:-1]
+        reader = csv.reader(io.StringIO(inner), quotechar='"', doublequote=True)
+        try:
+            parts = next(reader)
+        except StopIteration:
+            return {}
+        n_header = len(header)
+        if len(parts) <= n_header:
+            return dict(zip(header, parts + [""] * (n_header - len(parts))))
+        # First 26 columns are fixed; indices 26 and 27 are IMAGES (JSON) and DESCRIPCION
+        row = dict(zip(header[:26], parts[:26]))
+        # Reassemble IMAGES and DESCRIPCION. DESCRIPCION starts with \"['\" or \" '\";
+        # IMAGES is the JSON before that.
+        start_desc = len(parts)
+        for i in range(26, len(parts)):
+            stripped = parts[i].strip()
+            if stripped.startswith("'") or stripped.startswith("["):
+                start_desc = i
+                break
+        if start_desc > 26:
+            row[header[26]] = ",".join(parts[26:start_desc])
+            row[header[27]] = ",".join(parts[start_desc:]) if start_desc < len(parts) else ""
+        else:
+            row[header[26]] = ",".join(parts[26:]) if len(parts) > 26 else ""
+            row[header[27]] = ""
+        return row
+    
     def load_csv_chunks(self) -> Iterator[pd.DataFrame]:
-        """Load CSV in chunks for memory efficiency."""
+        """Load CSV in chunks. Handles format where each data row is wrapped in one double-quote pair."""
         logger.info(f"Loading CSV from: {self.csv_path}")
         
         if not Path(self.csv_path).exists():
             raise FileNotFoundError(f"CSV file not found: {self.csv_path}")
         
         try:
-            # Read in chunks with special handling for malformed CSV
-            chunk_reader = pd.read_csv(
-                self.csv_path,
-                chunksize=self.batch_size,
-                low_memory=False,
-                on_bad_lines='skip',  # Skip problematic lines
-                encoding='utf-8',
-            )
-            
-            for chunk_idx, chunk in enumerate(chunk_reader):
-                logger.debug(f"Loaded chunk {chunk_idx + 1} with {len(chunk)} rows")
-                yield chunk
-                
+            with open(self.csv_path, "r", encoding="utf-8") as f:
+                header_line = f.readline()
+                if not header_line:
+                    return
+                header = [c.strip() for c in header_line.strip().split(",")]
+                buffer: List[Dict[str, Any]] = []
+                for line in f:
+                    row = self._parse_csv_row(line, header)
+                    if not row:
+                        continue
+                    buffer.append(row)
+                    if len(buffer) >= self.batch_size:
+                        yield pd.DataFrame(buffer)
+                        buffer = []
+                if buffer:
+                    yield pd.DataFrame(buffer)
         except Exception as e:
             logger.error(f"Failed to load CSV: {e}")
             raise

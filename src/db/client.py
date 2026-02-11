@@ -98,6 +98,19 @@ class QdrantManager:
             logger.error(f"Failed to create collection '{collection_name}': {e}")
             return False
     
+    def delete_collection(self, collection_name: str) -> bool:
+        """Delete a collection (removes all vectors). Use with care."""
+        try:
+            if not self.collection_exists(collection_name):
+                logger.info(f"Collection '{collection_name}' does not exist, nothing to delete")
+                return True
+            self.client.delete_collection(collection_name)
+            logger.success(f"Deleted collection '{collection_name}'")
+            return True
+        except Exception as e:
+            logger.error(f"Failed to delete collection '{collection_name}': {e}")
+            return False
+    
     def upsert_points(
         self,
         collection_name: str,

@@ -1775,3 +1775,405 @@
 2026-02-10 16:27:26 | INFO     | __main__:run_etl_pipeline:111 - 📊 Records per Second: 2.3
 2026-02-10 16:27:26 | INFO     | __main__:run_etl_pipeline:112 - ============================================================
 2026-02-10 16:27:26 | INFO     | __main__:run_etl_pipeline:118 - ✅ Collection 'real_estate_properties' now contains 115 vectors
+2026-02-10 21:15:41 | INFO     | __main__:setup_logging:47 - Logging configured. Log file: etl_pipeline.log
+2026-02-10 21:15:41 | INFO     | __main__:main:148 - 🚀 Starting Semantic Search ETL Pipeline
+2026-02-10 21:15:41 | INFO     | __main__:main:149 - 📁 CSV File: lyon_balmaceda_scraper_summary.csv
+2026-02-10 21:15:41 | INFO     | __main__:main:150 - 🧠 Model: BAAI/bge-large-en-v1.5
+2026-02-10 21:15:41 | INFO     | __main__:main:151 - 📦 Batch Size: 1000
+2026-02-10 21:15:41 | INFO     | __main__:main:152 - 🗄️ Collection: real_estate_properties
+2026-02-10 21:15:41 | INFO     | __main__:main:154 - 🔄 Mode: --recreate (will delete collection and reload)
+2026-02-10 21:15:41 | INFO     | __main__:verify_dependencies:52 - Verifying dependencies...
+2026-02-10 21:15:41 | INFO     | __main__:verify_dependencies:62 - CSV file found: lyon_balmaceda_scraper_summary.csv (0.3 MB)
+2026-02-10 21:15:41 | INFO     | src.db.client:client:55 - Connected to Qdrant at localhost:6333
+2026-02-10 21:15:41 | SUCCESS  | __main__:verify_dependencies:67 - Qdrant connection successful. Collections: 1
+2026-02-10 21:15:41 | INFO     | src.services.embedder:_initialize_model:39 - Initializing embedding model: BAAI/bge-large-en-v1.5
+2026-02-10 21:19:45 | SUCCESS  | src.services.embedder:_initialize_model:59 - Model initialized successfully. Dimension: 1024
+2026-02-10 21:19:45 | INFO     | __main__:verify_dependencies:76 - Embedding model: BAAI/bge-large-en-v1.5 (dim: 1024)
+2026-02-10 21:19:45 | SUCCESS  | __main__:verify_dependencies:80 - Embedding service working. Test vector length: 1024
+2026-02-10 21:19:45 | WARNING  | __main__:run_etl_pipeline:99 - Recreate requested: deleting collection 'real_estate_properties'
+2026-02-10 21:19:45 | SUCCESS  | src.db.client:delete_collection:108 - Deleted collection 'real_estate_properties'
+2026-02-10 21:19:45 | INFO     | src.etl.loader:run_pipeline:179 - 🚀 Starting ETL Pipeline
+2026-02-10 21:19:45 | INFO     | src.etl.loader:setup_collection:50 - Setting up collection: real_estate_properties
+2026-02-10 21:19:45 | SUCCESS  | src.db.client:create_collection:94 - Created collection 'real_estate_properties' with 1024D vectors
+2026-02-10 21:19:45 | INFO     | src.etl.loader:setup_collection:64 - Collection setup complete. Vectors config: size=1024 distance=<Distance.COSINE: 'Cosine'> hnsw_config=None quantization_config=None on_disk=None datatype=None multivector_config=None
+2026-02-10 21:19:45 | INFO     | src.etl.loader:load_csv_chunks:70 - Loading CSV from: lyon_balmaceda_scraper_summary.csv
+2026-02-10 21:19:45 | DEBUG    | src.etl.loader:load_csv_chunks:86 - Loaded chunk 1 with 150 rows
+2026-02-10 21:19:45 | INFO     | src.etl.loader:run_pipeline:188 - Processing batch 1 (150 records)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 0: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 1: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 2: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 3: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 4: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 5: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 6: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 7: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 8: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 9: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 10: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 11: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 12: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 13: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 14: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 15: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 16: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 17: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 18: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 19: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 20: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 21: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 22: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 23: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 24: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 25: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 26: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 27: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 28: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 29: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 30: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 31: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 32: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 33: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 34: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 35: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 36: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 37: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 38: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 39: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 40: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 41: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 42: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 43: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 44: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 45: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 46: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 47: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 48: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 49: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 50: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 51: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 52: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 53: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 54: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 55: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 56: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 57: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 58: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 59: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 60: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 61: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 62: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 63: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 64: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 65: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 66: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 67: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 68: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 69: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 70: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 71: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 72: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 73: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 74: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 75: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 76: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 77: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 78: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 79: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 80: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 81: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 82: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 83: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 84: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 85: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 86: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 87: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 88: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 89: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 90: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 91: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 92: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 93: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 94: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 95: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 96: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 97: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 98: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 99: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 100: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 101: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 102: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 103: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 104: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 105: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 106: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 107: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 108: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 109: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 110: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 111: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 112: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 113: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 114: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 115: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 116: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 117: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 118: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 119: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 120: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 121: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 122: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 123: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 124: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 125: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 126: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 127: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 128: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 129: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 130: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 131: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 132: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 133: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 134: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 135: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 136: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 137: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 138: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 139: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 140: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 141: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 142: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 143: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 144: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 145: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 146: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 147: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 148: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:115 - Skipping row 149: insufficient semantic content (only 0 chars)
+2026-02-10 21:19:45 | WARNING  | src.etl.loader:process_batch:124 - No valid texts in batch
+2026-02-10 21:19:45 | INFO     | src.etl.loader:run_pipeline:204 - Batch 1 complete. Progress: Processed: 150, Embedded: 0, Uploaded: 0, Failed: 150
+2026-02-10 21:19:45 | SUCCESS  | src.etl.loader:run_pipeline:211 - 🎉 ETL Pipeline completed successfully!
+2026-02-10 21:19:45 | INFO     | src.etl.loader:run_pipeline:215 - Total Records Processed: 150
+2026-02-10 21:19:45 | INFO     | src.etl.loader:run_pipeline:215 - Successfully Embedded: 0
+2026-02-10 21:19:45 | INFO     | src.etl.loader:run_pipeline:215 - Successfully Uploaded: 0
+2026-02-10 21:19:45 | INFO     | src.etl.loader:run_pipeline:215 - Failed Records: 150
+2026-02-10 21:19:45 | INFO     | src.etl.loader:run_pipeline:215 - Batches Processed: 1
+2026-02-10 21:19:45 | INFO     | src.etl.loader:run_pipeline:215 - Success Rate: 0.0%
+2026-02-10 21:19:45 | INFO     | src.etl.loader:run_pipeline:215 - Collection Name: real_estate_properties
+2026-02-10 21:19:45 | INFO     | src.etl.loader:run_pipeline:215 - Embedding Model: BAAI/bge-large-en-v1.5
+2026-02-10 21:19:45 | INFO     | src.etl.loader:run_pipeline:215 - Vector Dimension: 1024
+2026-02-10 21:19:45 | INFO     | __main__:run_etl_pipeline:113 - ============================================================
+2026-02-10 21:19:45 | INFO     | __main__:run_etl_pipeline:114 - 🎉 ETL PIPELINE COMPLETED SUCCESSFULLY
+2026-02-10 21:19:45 | INFO     | __main__:run_etl_pipeline:115 - ============================================================
+2026-02-10 21:19:45 | INFO     | __main__:run_etl_pipeline:116 - ⏱️  Total Execution Time: 0.2 seconds (0.0 minutes)
+2026-02-10 21:19:45 | INFO     | __main__:run_etl_pipeline:117 - 📊 Records per Second: 853.8
+2026-02-10 21:19:45 | INFO     | __main__:run_etl_pipeline:118 - ============================================================
+2026-02-10 21:19:45 | INFO     | __main__:run_etl_pipeline:124 - ✅ Collection 'real_estate_properties' now contains 0 vectors
+2026-02-10 21:24:33 | INFO     | __main__:setup_logging:47 - Logging configured. Log file: etl_pipeline.log
+2026-02-10 21:24:33 | INFO     | __main__:main:148 - 🚀 Starting Semantic Search ETL Pipeline
+2026-02-10 21:24:33 | INFO     | __main__:main:149 - 📁 CSV File: lyon_balmaceda_scraper_summary.csv
+2026-02-10 21:24:33 | INFO     | __main__:main:150 - 🧠 Model: BAAI/bge-large-en-v1.5
+2026-02-10 21:24:33 | INFO     | __main__:main:151 - 📦 Batch Size: 1000
+2026-02-10 21:24:33 | INFO     | __main__:main:152 - 🗄️ Collection: real_estate_properties
+2026-02-10 21:24:33 | INFO     | __main__:main:154 - 🔄 Mode: --recreate (will delete collection and reload)
+2026-02-10 21:24:33 | INFO     | __main__:verify_dependencies:52 - Verifying dependencies...
+2026-02-10 21:24:33 | INFO     | __main__:verify_dependencies:62 - CSV file found: lyon_balmaceda_scraper_summary.csv (0.3 MB)
+2026-02-10 21:24:33 | INFO     | src.db.client:client:55 - Connected to Qdrant at localhost:6333
+2026-02-10 21:24:33 | SUCCESS  | __main__:verify_dependencies:67 - Qdrant connection successful. Collections: 1
+2026-02-10 21:24:33 | INFO     | src.services.embedder:_initialize_model:39 - Initializing embedding model: BAAI/bge-large-en-v1.5
+2026-02-10 21:24:36 | SUCCESS  | src.services.embedder:_initialize_model:59 - Model initialized successfully. Dimension: 1024
+2026-02-10 21:24:36 | INFO     | __main__:verify_dependencies:76 - Embedding model: BAAI/bge-large-en-v1.5 (dim: 1024)
+2026-02-10 21:24:36 | SUCCESS  | __main__:verify_dependencies:80 - Embedding service working. Test vector length: 1024
+2026-02-10 21:24:36 | WARNING  | __main__:run_etl_pipeline:99 - Recreate requested: deleting collection 'real_estate_properties'
+2026-02-10 21:24:36 | SUCCESS  | src.db.client:delete_collection:108 - Deleted collection 'real_estate_properties'
+2026-02-10 21:24:36 | INFO     | src.etl.loader:run_pipeline:221 - 🚀 Starting ETL Pipeline
+2026-02-10 21:24:36 | INFO     | src.etl.loader:setup_collection:52 - Setting up collection: real_estate_properties
+2026-02-10 21:24:36 | SUCCESS  | src.db.client:create_collection:94 - Created collection 'real_estate_properties' with 1024D vectors
+2026-02-10 21:24:36 | INFO     | src.etl.loader:setup_collection:66 - Collection setup complete. Vectors config: size=1024 distance=<Distance.COSINE: 'Cosine'> hnsw_config=None quantization_config=None on_disk=None datatype=None multivector_config=None
+2026-02-10 21:24:36 | INFO     | src.etl.loader:load_csv_chunks:109 - Loading CSV from: lyon_balmaceda_scraper_summary.csv
+2026-02-10 21:24:36 | INFO     | src.etl.loader:run_pipeline:230 - Processing batch 1 (150 records)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting value: line 1 column 2 (char 1)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting value: line 1 column 2 (char 1)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting value: line 1 column 2 (char 1)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting value: line 1 column 2 (char 1)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting value: line 1 column 2 (char 1)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting value: line 1 column 2 (char 1)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting value: line 1 column 2 (char 1)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting value: line 1 column 2 (char 1)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Extra data: line 1 column 10 (char 9)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Extra data: line 1 column 6 (char 5)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting value: line 1 column 2 (char 1)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting value: line 1 column 2 (char 1)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting value: line 1 column 2 (char 1)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting value: line 1 column 1 (char 0)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting value: line 1 column 2 (char 1)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting value: line 1 column 2 (char 1)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting value: line 1 column 1 (char 0)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Extra data: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Extra data: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting value: line 1 column 2 (char 1)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting value: line 1 column 2 (char 1)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting value: line 1 column 2 (char 1)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting value: line 1 column 2 (char 1)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | WARNING  | src.etl.cleaner:clean_numeric:81 - Could not convert '3-05' to numeric, using default: 0.0
+2026-02-10 21:24:36 | WARNING  | src.etl.cleaner:clean_numeric:81 - Could not convert '3-05' to numeric, using default: 0.0
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | WARNING  | src.etl.cleaner:clean_numeric:81 - Could not convert '3-05' to numeric, using default: 0.0
+2026-02-10 21:24:36 | WARNING  | src.etl.cleaner:clean_numeric:81 - Could not convert '3-05' to numeric, using default: 0.0
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting value: line 1 column 2 (char 1)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting value: line 1 column 2 (char 1)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting value: line 1 column 2 (char 1)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:clean_coordinates:111 - Coordinates out of Chile bounds, setting to zero: (45.4200572, -75.7003397)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | WARNING  | src.etl.cleaner:clean_numeric:81 - Could not convert '3-05' to numeric, using default: 0.0
+2026-02-10 21:24:36 | WARNING  | src.etl.cleaner:clean_numeric:81 - Could not convert '3-05' to numeric, using default: 0.0
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting value: line 1 column 2 (char 1)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:clean_coordinates:111 - Coordinates out of Chile bounds, setting to zero: (20.2114185, -87.4653502)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | WARNING  | src.etl.cleaner:clean_numeric:81 - Could not convert '3-05' to numeric, using default: 0.0
+2026-02-10 21:24:36 | WARNING  | src.etl.cleaner:clean_numeric:81 - Could not convert '3-05' to numeric, using default: 0.0
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting value: line 1 column 2 (char 1)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Extra data: line 1 column 3 (char 2)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | DEBUG    | src.etl.cleaner:parse_images_json:140 - Could not parse images JSON: Expecting ':' delimiter: line 1 column 4 (char 3)
+2026-02-10 21:24:36 | INFO     | src.etl.loader:process_batch:170 - Generating embeddings for 150 texts
+2026-02-10 21:25:14 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 1 (32 texts)
+2026-02-10 21:25:52 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 2 (32 texts)
+2026-02-10 21:26:31 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 3 (32 texts)
+2026-02-10 21:27:08 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 4 (32 texts)
+2026-02-10 21:27:34 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 5 (22 texts)
+2026-02-10 21:27:34 | SUCCESS  | src.etl.loader:process_batch:198 - Prepared 150 points for upload
+2026-02-10 21:27:34 | INFO     | src.db.client:upsert_points:125 - Upserted 150 points to 'real_estate_properties'
+2026-02-10 21:27:34 | INFO     | src.etl.loader:run_pipeline:246 - Batch 1 complete. Progress: Processed: 150, Embedded: 150, Uploaded: 150, Failed: 0
+2026-02-10 21:27:34 | SUCCESS  | src.etl.loader:run_pipeline:253 - 🎉 ETL Pipeline completed successfully!
+2026-02-10 21:27:34 | INFO     | src.etl.loader:run_pipeline:257 - Total Records Processed: 150
+2026-02-10 21:27:34 | INFO     | src.etl.loader:run_pipeline:257 - Successfully Embedded: 150
+2026-02-10 21:27:34 | INFO     | src.etl.loader:run_pipeline:257 - Successfully Uploaded: 150
+2026-02-10 21:27:34 | INFO     | src.etl.loader:run_pipeline:257 - Failed Records: 0
+2026-02-10 21:27:34 | INFO     | src.etl.loader:run_pipeline:257 - Batches Processed: 1
+2026-02-10 21:27:34 | INFO     | src.etl.loader:run_pipeline:257 - Success Rate: 100.0%
+2026-02-10 21:27:34 | INFO     | src.etl.loader:run_pipeline:257 - Collection Name: real_estate_properties
+2026-02-10 21:27:34 | INFO     | src.etl.loader:run_pipeline:257 - Embedding Model: BAAI/bge-large-en-v1.5
+2026-02-10 21:27:34 | INFO     | src.etl.loader:run_pipeline:257 - Vector Dimension: 1024
+2026-02-10 21:27:34 | INFO     | __main__:run_etl_pipeline:113 - ============================================================
+2026-02-10 21:27:34 | INFO     | __main__:run_etl_pipeline:114 - 🎉 ETL PIPELINE COMPLETED SUCCESSFULLY
+2026-02-10 21:27:34 | INFO     | __main__:run_etl_pipeline:115 - ============================================================
+2026-02-10 21:27:34 | INFO     | __main__:run_etl_pipeline:116 - ⏱️  Total Execution Time: 178.2 seconds (3.0 minutes)
+2026-02-10 21:27:34 | INFO     | __main__:run_etl_pipeline:117 - 📊 Records per Second: 0.8
+2026-02-10 21:27:34 | INFO     | __main__:run_etl_pipeline:118 - ============================================================
+2026-02-10 21:27:34 | INFO     | __main__:run_etl_pipeline:124 - ✅ Collection 'real_estate_properties' now contains 150 vectors

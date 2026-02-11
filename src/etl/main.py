@@ -5,6 +5,7 @@ ETL Pipeline Main Entry Point
 Command-line interface for running the ETL pipeline.
 """
 
+import argparse
 import sys
 import time
 from pathlib import Path
@@ -89,11 +90,16 @@ def verify_dependencies() -> bool:
         return False
 
 
-def run_etl_pipeline() -> None:
+def run_etl_pipeline(recreate_collection: bool = False) -> None:
     """Run the complete ETL pipeline."""
     start_time = time.time()
     
     try:
+        if recreate_collection:
+            logger.warning(f"Recreate requested: deleting collection '{settings.qdrant_collection_name}'")
+            if not qdrant.delete_collection(settings.qdrant_collection_name):
+                raise RuntimeError("Failed to delete collection")
+        
         # Initialize pipeline
         loader = ETLLoader()
         
@@ -124,6 +130,19 @@ def run_etl_pipeline() -> None:
 
 def main() -> None:
     """Main entry point."""
+    parser = argparse.ArgumentParser(description="Semantic Search ETL Pipeline")
+    parser.add_argument(
+        "--recreate",
+        action="store_true",
+        help="Delete the Qdrant collection and reload from CSV (cleans corrupted data). No confirmation prompt.",
+    )
+    parser.add_argument(
+        "-y", "--yes",
+        action="store_true",
+        help="Skip confirmation prompt (use with scripts).",
+    )
+    args = parser.parse_args()
+    
     setup_logging()
     
     logger.info("🚀 Starting Semantic Search ETL Pipeline")
@@ -131,21 +150,24 @@ def main() -> None:
     logger.info(f"🧠 Model: {settings.embedding_model}")
     logger.info(f"📦 Batch Size: {settings.batch_size}")
     logger.info(f"🗄️ Collection: {settings.qdrant_collection_name}")
+    if args.recreate:
+        logger.info("🔄 Mode: --recreate (will delete collection and reload)")
     
     # Verify environment
     if not verify_dependencies():
         logger.error("❌ Dependency verification failed")
         sys.exit(1)
     
-    # Confirm execution
-    logger.warning("⚠️  This will process the entire CSV file and upload to Qdrant")
-    response = input("Continue? (y/N): ").strip().lower()
-    if response != 'y':
-        logger.info("Pipeline cancelled by user")
-        sys.exit(0)
+    # Confirm execution unless --recreate or -y
+    if not args.recreate and not args.yes:
+        logger.warning("⚠️  This will process the entire CSV file and upload to Qdrant")
+        response = input("Continue? (y/N): ").strip().lower()
+        if response != 'y':
+            logger.info("Pipeline cancelled by user")
+            sys.exit(0)
     
     # Run pipeline
-    run_etl_pipeline()
+    run_etl_pipeline(recreate_collection=args.recreate)
 
 
 if __name__ == "__main__":
