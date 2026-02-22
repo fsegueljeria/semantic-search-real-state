@@ -1,0 +1,37 @@
+version: "3.8"
+
+services:
+  qdrant:
+    image: qdrant/qdrant:latest
+    container_name: realstate-qdrant
+    volumes:
+      - qdrant_data:/qdrant/storage
+    restart: unless-stopped
+
+  chat:
+    build: .
+    image: realstate-chat:latest
+    container_name: realstate-chat
+    depends_on:
+      - qdrant
+    ports:
+      - "8501:8501"
+    environment:
+      QDRANT_HOST: qdrant
+      QDRANT_PORT: 6333
+      QDRANT_GRPC_PORT: 6334
+      QDRANT_COLLECTION_NAME: real_estate_properties
+      QDRANT_API_KEY: ""
+      CSV_FILE_PATH: ./lyon_balmaceda_scraper_summary.csv
+      BATCH_SIZE: 500
+      MAX_WORKERS: 4
+      EMBEDDING_MODEL: jinaai/jina-embeddings-v2-base-es
+      EMBEDDING_DIMENSION: 768
+      LOG_LEVEL: INFO
+    volumes:
+      - models_cache:/app/models_cache
+    restart: unless-stopped
+
+volumes:
+  qdrant_data:
+  models_cache:

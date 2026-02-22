@@ -30,9 +30,10 @@ from src.etl.cleaner import DataCleaner
 class ETLLoader:
     """Main ETL pipeline for processing and loading real estate data."""
     
-    def __init__(self, csv_path: Path = None, batch_size: int = None):
+    def __init__(self, csv_path: Path = None, batch_size: int = None, skip_rows: int = 0):
         self.csv_path = csv_path or settings.csv_file_path
         self.batch_size = batch_size or settings.batch_size
+        self.skip_rows = max(0, int(skip_rows or 0))
         self.collection_name = settings.qdrant_collection_name
         
         # Initialize components
@@ -75,15 +76,20 @@ class ETLLoader:
         when the inner parse yields extra columns (from commas inside those fields).
         """
         line = line.rstrip("\n\r")
-        if not line or len(line) < 2 or line[0] != '"' or line[-1] != '"':
+        if not line:
             return {}
-        inner = line[1:-1]
+        # Support both formats:
+        # 1) Entire row wrapped in a single pair of quotes (legacy malformed export)
+        # 2) Standard CSV row (preferred)
+        inner = line[1:-1] if len(line) >= 2 and line[0] == '"' and line[-1] == '"' else line
         reader = csv.reader(io.StringIO(inner), quotechar='"', doublequote=True)
         try:
             parts = next(reader)
         except StopIteration:
             return {}
         n_header = len(header)
+        if len(parts) == n_header:
+            return dict(zip(header, parts))
         if len(parts) <= n_header:
             return dict(zip(header, parts + [""] * (n_header - len(parts))))
         # First 26 columns are fixed; indices 26 and 27 are IMAGES (JSON) and DESCRIPCION
@@ -107,6 +113,8 @@ class ETLLoader:
     def load_csv_chunks(self) -> Iterator[pd.DataFrame]:
         """Load CSV in chunks. Handles format where each data row is wrapped in one double-quote pair."""
         logger.info(f"Loading CSV from: {self.csv_path}")
+        if self.skip_rows > 0:
+            logger.warning(f"Resume mode enabled: skipping first {self.skip_rows} parsed rows")
         
         if not Path(self.csv_path).exists():
             raise FileNotFoundError(f"CSV file not found: {self.csv_path}")
@@ -118,9 +126,13 @@ class ETLLoader:
                     return
                 header = [c.strip() for c in header_line.strip().split(",")]
                 buffer: List[Dict[str, Any]] = []
+                skipped = 0
                 for line in f:
                     row = self._parse_csv_row(line, header)
                     if not row:
+                        continue
+                    if skipped < self.skip_rows:
+                        skipped += 1
                         continue
                     buffer.append(row)
                     if len(buffer) >= self.batch_size:

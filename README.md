@@ -1,6 +1,6 @@
 # Semantic Search ETL Pipeline
 
-High-performance ETL system for processing real estate data and building a semantic search engine using Qdrant vector database and BAAI/bge-m3 embeddings.
+High-performance ETL system for processing real estate data and building a semantic search engine using Qdrant vector database and open-source embeddings.
 
 ## Features
 
@@ -8,6 +8,7 @@ High-performance ETL system for processing real estate data and building a seman
 - **Open Source Embeddings**: Uses BAAI/bge-m3 model for state-of-the-art multilingual understanding
 - **Scalable Architecture**: Modular design with configurable batch sizes and parallel processing
 - **Vector Search**: Optimized for Qdrant vector database with hybrid search capabilities
+- **Chat Frontend**: Streamlit chat UI with property cards, photos and links
 
 ## Project Structure
 
@@ -65,6 +66,11 @@ docker run -p 6333:6333 -p 6334:6334 qdrant/qdrant
 python -m src.etl.main
 ```
 
+3. Run the chat frontend:
+```bash
+streamlit run scripts/chat_search_frontend.py
+```
+
 ## Data Schema
 
 The pipeline processes real estate data with the following key fields:
@@ -80,8 +86,9 @@ The pipeline processes real estate data with the following key fields:
 
 Key settings in [config/settings.py](config/settings.py):
 
-- **EMBEDDING_MODEL**: `BAAI/bge-m3` (1024 dimensions)
-- **BATCH_SIZE**: 1000 records per batch (adjustable)
+- **EMBEDDING_MODEL**: Configurable via `.env` (use a model supported by FastEmbed)
+- **EMBEDDING_DIMENSION**: Must match your selected model output vector size
+- **BATCH_SIZE**: 500 records per batch (adjustable)
 - **QDRANT_COLLECTION_NAME**: `real_estate_properties`
 
 ## Next Steps

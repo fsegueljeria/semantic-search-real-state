@@ -201,6 +201,35 @@ class QdrantManager:
             logger.error(f"Failed to get collection info for '{collection_name}': {e}")
             return None
 
+    def get_points_by_payload(
+        self,
+        collection_name: str,
+        payload_filter: Dict[str, Any],
+        limit: int = 10,
+        with_vectors: bool = False,
+    ) -> List[Dict[str, Any]]:
+        """
+        Busca puntos por filtro sobre el payload (ej: url exacto).
+        Útil para verificar si una propiedad está en la base y ver sus datos guardados.
+        """
+        try:
+            conditions = [
+                FieldCondition(key=k, match=MatchValue(value=v))
+                for k, v in payload_filter.items()
+            ]
+            search_filter = Filter(must=conditions)
+            results, _ = self.client.scroll(
+                collection_name=collection_name,
+                scroll_filter=search_filter,
+                limit=limit,
+                with_payload=True,
+                with_vectors=with_vectors,
+            )
+            return list(results) if results else []
+        except Exception as e:
+            logger.error(f"Scroll by payload failed in '{collection_name}': {e}")
+            return []
+
 
 # Global instance
 qdrant = QdrantManager()

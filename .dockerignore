@@ -1,0 +1,6 @@
+.git
+.venv
+__pycache__
+*.pyc
+models_cache
+etl_pipeline.log

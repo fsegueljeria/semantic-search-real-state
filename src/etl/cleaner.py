@@ -243,7 +243,7 @@ class DataCleaner:
         
         # Text fields
         metadata['titulo'] = DataCleaner.clean_string(row.get('TITULO_PROPIEDAD', ''))[:500]
-        metadata['descripcion'] = DataCleaner.clean_string(row.get('DESCRIPCION', ''))[:1000]
+        metadata['descripcion'] = DataCleaner.clean_string(row.get('DESCRIPCION', ''))
         
         # Images
         metadata['images'] = DataCleaner.parse_images_json(row.get('IMAGES'))

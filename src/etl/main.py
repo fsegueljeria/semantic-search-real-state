@@ -90,7 +90,7 @@ def verify_dependencies() -> bool:
         return False
 
 
-def run_etl_pipeline(recreate_collection: bool = False) -> None:
+def run_etl_pipeline(recreate_collection: bool = False, skip_rows: int = 0) -> None:
     """Run the complete ETL pipeline."""
     start_time = time.time()
     
@@ -101,7 +101,7 @@ def run_etl_pipeline(recreate_collection: bool = False) -> None:
                 raise RuntimeError("Failed to delete collection")
         
         # Initialize pipeline
-        loader = ETLLoader()
+        loader = ETLLoader(skip_rows=skip_rows)
         
         # Run pipeline
         final_stats = loader.run_pipeline()
@@ -141,6 +141,12 @@ def main() -> None:
         action="store_true",
         help="Skip confirmation prompt (use with scripts).",
     )
+    parser.add_argument(
+        "--skip-rows",
+        type=int,
+        default=0,
+        help="Skip first N parsed rows from CSV (resume interrupted loads without duplicating).",
+    )
     args = parser.parse_args()
     
     setup_logging()
@@ -152,6 +158,8 @@ def main() -> None:
     logger.info(f"🗄️ Collection: {settings.qdrant_collection_name}")
     if args.recreate:
         logger.info("🔄 Mode: --recreate (will delete collection and reload)")
+    if args.skip_rows > 0:
+        logger.info(f"⏭️  Mode: --skip-rows {args.skip_rows} (resume load)")
     
     # Verify environment
     if not verify_dependencies():
@@ -167,7 +175,7 @@ def main() -> None:
             sys.exit(0)
     
     # Run pipeline
-    run_etl_pipeline(recreate_collection=args.recreate)
+    run_etl_pipeline(recreate_collection=args.recreate, skip_rows=args.skip_rows)
 
 
 if __name__ == "__main__":
