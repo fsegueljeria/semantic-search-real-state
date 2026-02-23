@@ -39,8 +39,8 @@ semantic-search/
 
 1. Create a virtual environment:
 ```bash
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+python3 -m venv .venv
+source .venv/bin/activate  # On Windows: .venv\Scripts\activate
 ```
 
 2. Install dependencies:
@@ -58,18 +58,22 @@ cp .env.example .env
 
 1. Ensure Qdrant is running (Docker recommended):
 ```bash
-docker run -p 6333:6333 -p 6334:6334 qdrant/qdrant
+docker run -d -p 6333:6333 -p 6334:6334 qdrant/qdrant
 ```
 
-2. Run the ETL pipeline (implementation in progress):
+2. (Optional) Run the ETL pipeline to load data:
 ```bash
 python -m src.etl.main
 ```
 
-3. Run the chat frontend:
+3. Run the chat frontend — **use `streamlit run`** (do not run with `python script.py`):
 ```bash
 streamlit run scripts/chat_search_frontend.py
 ```
+
+Then open http://localhost:8501 in your browser.
+
+**Guía detallada:** see [docs/SETUP.md](docs/SETUP.md) for a full step-by-step setup guide.
 
 ## Data Schema
 

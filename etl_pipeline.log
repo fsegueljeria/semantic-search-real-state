@@ -5593,3 +5593,15 @@
 2026-02-19 01:57:55 | INFO     | __main__:run_etl_pipeline:117 - 📊 Records per Second: 1.7
 2026-02-19 01:57:55 | INFO     | __main__:run_etl_pipeline:118 - ============================================================
 2026-02-19 01:57:55 | INFO     | __main__:run_etl_pipeline:124 - ✅ Collection 'real_estate_properties' now contains 38411 vectors
+2026-02-23 13:12:37 | INFO     | __main__:setup_logging:47 - Logging configured. Log file: etl_pipeline.log
+2026-02-23 13:12:37 | INFO     | __main__:main:154 - 🚀 Starting Semantic Search ETL Pipeline
+2026-02-23 13:12:37 | INFO     | __main__:main:155 - 📁 CSV File: lyon_balmaceda_scraper.csv
+2026-02-23 13:12:37 | INFO     | __main__:main:156 - 🧠 Model: jinaai/jina-embeddings-v2-base-es
+2026-02-23 13:12:37 | INFO     | __main__:main:157 - 📦 Batch Size: 500
+2026-02-23 13:12:37 | INFO     | __main__:main:158 - 🗄️ Collection: real_estate_properties
+2026-02-23 13:12:37 | INFO     | __main__:verify_dependencies:52 - Verifying dependencies...
+2026-02-23 13:12:37 | INFO     | __main__:verify_dependencies:62 - CSV file found: lyon_balmaceda_scraper.csv (75.7 MB)
+2026-02-23 13:12:37 | INFO     | src.db.client:client:55 - Connected to Qdrant at localhost:6333
+2026-02-23 13:12:37 | ERROR    | __main__:verify_dependencies:69 - Cannot connect to Qdrant: [Errno 61] Connection refused
+2026-02-23 13:12:37 | ERROR    | __main__:verify_dependencies:70 - Make sure Qdrant is running: docker run -p 6333:6333 -p 6334:6334 qdrant/qdrant
+2026-02-23 13:12:37 | ERROR    | __main__:main:166 - ❌ Dependency verification failed

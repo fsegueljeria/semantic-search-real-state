@@ -10,8 +10,10 @@ services:
 
   chat:
     build: .
-    image: realstate-chat:latest
+    image: python:3.11-slim
     container_name: realstate-chat
+    # Añade esto para mantenerlo encendido
+    entrypoint: ["tail", "-f", "/dev/null"]
     depends_on:
       - qdrant
     ports:
