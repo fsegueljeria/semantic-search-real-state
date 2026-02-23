@@ -12,7 +12,7 @@ import pandas as pd
 from src.etl.cleaner import DataCleaner
 
 # Test with a few sample rows
-csv_path = "lyon_balmaceda_scraper_summary.csv"
+csv_path = "lyon_balmaceda_scraper.csv"
 df = pd.read_csv(csv_path, nrows=3, quoting=3, escapechar='\\', on_bad_lines='skip', encoding='utf-8')
 
 print("=== TESTING DATA CLEANING ===")

@@ -18,7 +18,7 @@ class ETLSettings(BaseSettings):
     
     # Data Source
     csv_file_path: Path = Field(
-        default="./lyon_balmaceda_scraper_summary.csv",
+        default="./lyon_balmaceda_scraper.csv",
         description="Path to the CSV file to process"
     )
     

@@ -24,7 +24,7 @@ services:
       QDRANT_GRPC_PORT: 6334
       QDRANT_COLLECTION_NAME: real_estate_properties
       QDRANT_API_KEY: ""
-      CSV_FILE_PATH: ./lyon_balmaceda_scraper_summary.csv
+      CSV_FILE_PATH: ./lyon_balmaceda_scraper.csv
       BATCH_SIZE: 500
       MAX_WORKERS: 4
       EMBEDDING_MODEL: jinaai/jina-embeddings-v2-base-es

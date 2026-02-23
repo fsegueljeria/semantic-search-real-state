@@ -11,7 +11,7 @@ sys.path.insert(0, str(project_root))
 import pandas as pd
 
 # Read with different options to handle the complex quoting
-csv_path = "lyon_balmaceda_scraper_summary.csv"
+csv_path = "lyon_balmaceda_scraper.csv"
 
 print("=== RAW CSV INSPECTION ===")
 
