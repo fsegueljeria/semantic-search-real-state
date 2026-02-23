@@ -61,11 +61,12 @@ cp .env.example .env
 docker run -d -p 6333:6333 -p 6334:6334 qdrant/qdrant
 ```
 
-2. (Optional) Run the ETL pipeline to load data:
+2. (Optional) Run the ETL pipeline to load data (use the venv Python):
 ```bash
-python -m src.etl.main
+python -m src.etl.main   # with venv activated
+# or: .venv/bin/python -m src.etl.main
 ```
-
+3
 3. Run the chat frontend — **use `streamlit run`** (do not run with `python script.py`):
 ```bash
 streamlit run scripts/chat_search_frontend.py

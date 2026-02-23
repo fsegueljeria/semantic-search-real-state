@@ -84,6 +84,9 @@ python -m src.etl.main
 
 (Requiere que el CSV indicado en `CSV_FILE_PATH` exista.)
 
+**Importante:** usa siempre el Python del venv. Si no tienes el venv activado:
+` .venv/bin/python -m src.etl.main`
+
 ---
 
 ## Paso 7: Lanzar el frontend de chat (Streamlit)
@@ -134,6 +137,7 @@ streamlit run scripts/chat_search_frontend.py
 
 | Síntoma | Causa | Solución |
 |--------|--------|----------|
+| `ModuleNotFoundError: pydantic_settings` (u otro módulo) | Estás usando el `python3` del sistema en vez del venv | Activa el venv (`source .venv/bin/activate`) o usa `.venv/bin/python -m src.etl.main` y `.venv/bin/streamlit run ...` |
 | `ModuleNotFoundError: streamlit` | Dependencias no instaladas o no estás en el venv | `pip install -r requirements.txt` y usar `source .venv/bin/activate` |
 | `Warning: to view this Streamlit app... run with streamlit run` | Ejecutaste `python scripts/chat_search_frontend.py` | Usar **`streamlit run scripts/chat_search_frontend.py`** |
 | No hay resultados / error de conexión | Qdrant no está corriendo o host/puerto incorrectos | Levantar Qdrant (Paso 5) y revisar `QDRANT_HOST` y `QDRANT_PORT` en `.env` |
