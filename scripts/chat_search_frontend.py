@@ -75,8 +75,13 @@ def _search_properties(query: str, top_k: int, score_threshold: float) -> Dict[s
     }
 
 
+# Altura del placeholder cuando no hay imagen; tarjetas por fila en la cuadrícula
+CARD_IMAGE_HEIGHT = 140
+CARDS_PER_ROW = 3
+
+
 def _render_images_carousel(images: List[str], carousel_key: str) -> None:
-    """Renderiza un carrusel simple con navegación anterior/siguiente."""
+    """Renderiza un carrusel de fotos dentro de un expander (no ocupa espacio por defecto)."""
     if not images:
         return
 
@@ -104,21 +109,25 @@ def _render_images_carousel(images: List[str], carousel_key: str) -> None:
     current_idx = int(st.session_state[idx_key])
     st.image(images[current_idx], use_container_width=True)
 
-    with st.expander("Ver todas las URLs de fotos"):
-        for i, img_url in enumerate(images, 1):
-            st.write(f"{i}. {img_url}")
 
-
-def _render_property_card(item: Dict[str, Any], index: int, card_key: str) -> None:
-    """Renderiza una propiedad en formato tarjeta."""
+def _render_property_card_compact(item: Dict[str, Any], index: int, card_key: str) -> None:
+    """
+    Tarjeta compacta al estilo listado: miniatura pequeña, tipo, ubicación, precio, dorm|baños|m².
+    Descripción y galería de fotos quedan dentro de un expander 'Ver más'.
+    """
     payload = item["payload"]
     score = item["score"]
 
     title = payload.get("titulo") or f"Propiedad #{index}"
     comuna = payload.get("comuna", "No especificada")
-    tipo = payload.get("tipo_propiedad", "N/A")
+    barrio = payload.get("barrio", "")
+    tipo = (payload.get("tipo_propiedad") or "N/A").capitalize()
     operacion = payload.get("operacion", "N/A")
     precio = payload.get("precio_uf", 0)
+    try:
+        precio_str = f"{float(precio):,.0f}" if precio not in ("N/A", None) else "N/A"
+    except (TypeError, ValueError):
+        precio_str = str(precio)
     dormitorios = payload.get("dormitorios", "N/A")
     banios = payload.get("banios", "N/A")
     m2_util = payload.get("m2_util", "N/A")
@@ -127,27 +136,41 @@ def _render_property_card(item: Dict[str, Any], index: int, card_key: str) -> No
     images = payload.get("images", [])
 
     with st.container(border=True):
-        st.markdown(f"### {index}. {title}")
-        st.caption(f"Relevancia: {score:.4f}")
-        st.markdown(
-            f"**{tipo}** en **{operacion}** · 📍 {comuna} · 💰 {precio:.2f} UF"
-        )
-        st.markdown(
-            f"🛏️ {dormitorios} dormitorios · 🚿 {banios} baños · "
-            f"📐 {m2_util} m² útiles · 📐 {m2_total} m² totales"
-        )
-
-        descripcion = payload.get("descripcion", "")
-        if descripcion:
-            st.markdown("**Descripción completa**")
-            st.write(descripcion)
+        # Fila: miniatura a la izquierda, datos a la derecha
+        col_img, col_info = st.columns([1, 2])
+        with col_img:
+            if images:
+                st.image(
+                    images[0],
+                    use_container_width=True,
+                    caption="",
+                )
+            else:
+                st.markdown(
+                    f"<div style='height:{CARD_IMAGE_HEIGHT}px; background:#f0f0f0; "
+                    "display:flex; align-items:center; justify-content:center; border-radius:8px;'>"
+                    "<span style='color:#888;'>Sin imagen</span></div>",
+                    unsafe_allow_html=True,
+                )
+        with col_info:
+            st.markdown(f"**{tipo}** · {operacion}")
+            ubicacion = f"{comuna}" + (f", {barrio}" if barrio else "")
+            st.caption(f"📍 {ubicacion}")
+            st.markdown(f"**UF {precio_str}**")
+            st.caption(f"🛏️ {dormitorios} dorm · 🚿 {banios} baños · 📐 {m2_total} m² totales")
 
         if url:
             st.markdown(f"[Abrir publicación]({url})")
 
-        if images:
-            st.markdown(f"**Fotos ({len(images)})**")
-            _render_images_carousel(images, carousel_key=f"{card_key}_carousel")
+        with st.expander("Ver descripción y fotos"):
+            descripcion = payload.get("descripcion", "")
+            if descripcion:
+                st.markdown("**Descripción completa**")
+                st.write(descripcion[:800] + ("..." if len(descripcion) > 800 else ""))
+            if images:
+                st.markdown(f"**Fotos ({len(images)})**")
+                _render_images_carousel(images, carousel_key=f"{card_key}_carousel")
+            st.caption(f"Relevancia: {score:.4f}")
 
 
 def main() -> None:
@@ -180,14 +203,22 @@ def main() -> None:
         with st.chat_message("user"):
             st.write(turn["query"])
         with st.chat_message("assistant"):
-            filters = turn["filters"]
-            if filters:
-                st.write(f"Filtros detectados: {filters}")
-            if turn["query_clean"] and turn["query_clean"] != turn["query"]:
-                st.write(f"Query semántica: `{turn['query_clean']}`")
-            st.write(f"Resultados: {len(turn['results'])}")
-            for idx, item in enumerate(turn["results"], 1):
-                _render_property_card(item, idx, card_key=f"history_{turn_idx}_{idx}")
+            n = len(turn["results"])
+            st.markdown(
+                f"He encontrado **{n} propiedades** aplicando los criterios: **{turn['query']}**."
+            )
+            if turn["filters"]:
+                st.caption(f"Filtros: {turn['filters']}")
+            st.markdown("---")
+            # Cuadrícula de tarjetas compactas (varias por fila)
+            for start in range(0, n, CARDS_PER_ROW):
+                chunk = turn["results"][start : start + CARDS_PER_ROW]
+                cols = st.columns(min(len(chunk), CARDS_PER_ROW))
+                for col_idx, (col, item) in enumerate(zip(cols, chunk)):
+                    with col:
+                        _render_property_card_compact(
+                            item, start + col_idx + 1, card_key=f"history_{turn_idx}_{start}_{col_idx}"
+                        )
 
     prompt = st.chat_input(
         "Ej: casa en Buin con jardín, 4 dormitorios y menos de 6000 UF"
@@ -202,17 +233,26 @@ def main() -> None:
         with st.spinner("Buscando propiedades..."):
             response = _search_properties(prompt, top_k=top_k, score_threshold=score_threshold)
 
-        if response["filters"]:
-            st.write(f"Filtros detectados: {response['filters']}")
-        if response["query_clean"] and response["query_clean"] != prompt:
-            st.write(f"Query semántica: `{response['query_clean']}`")
-
         if not response["results"]:
             st.warning("No encontré propiedades con esos criterios. Prueba una consulta más amplia.")
         else:
-            st.success(f"Encontré {len(response['results'])} propiedades relevantes.")
-            for idx, item in enumerate(response["results"], 1):
-                _render_property_card(item, idx, card_key=f"current_{len(st.session_state.history)}_{idx}")
+            n = len(response["results"])
+            st.markdown(
+                f"He encontrado **{n} propiedades** aplicando los criterios: **{response['query']}**."
+            )
+            if response["filters"]:
+                st.caption(f"Filtros: {response['filters']}")
+            st.markdown("---")
+            # Cuadrícula de tarjetas compactas
+            for start in range(0, n, CARDS_PER_ROW):
+                chunk = response["results"][start : start + CARDS_PER_ROW]
+                cols = st.columns(min(len(chunk), CARDS_PER_ROW))
+                for col_idx, (col, item) in enumerate(zip(cols, chunk)):
+                    with col:
+                        _render_property_card_compact(
+                            item, start + col_idx + 1,
+                            card_key=f"current_{len(st.session_state.history)}_{start}_{col_idx}",
+                        )
 
     st.session_state.history.append(response)
 
