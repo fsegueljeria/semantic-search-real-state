@@ -112,6 +112,7 @@ def _extract_uf_range(query: str) -> tuple[str, Dict[str, Any]]:
     Soporta:
     - 'entre 20000 y 30000 uf' o '20000-30000 uf' -> precio entre min y max
     - 'desde 20000 hasta 30000 uf' -> mismo que entre
+    - 'desde 25000 uf', 'desde los 25000 uf' -> precio >= X (mínimo)
     - 'más de 20000 uf', 'sobre 20000 uf' -> precio >= X
     - 'menos de 50000 uf', 'hasta 50000 uf' -> precio <= X
     """
@@ -149,6 +150,14 @@ def _extract_uf_range(query: str) -> tuple[str, Dict[str, Any]]:
         low, high = (a, b) if a <= b else (b, a)
         filters["precio_uf"] = {"gte": low, "lte": high}
         query_clean = re.sub(r"\d+(?:[.,]\d+)?\s*-\s*\d+(?:[.,]\d+)?\s*uf\b", "", query_clean, flags=re.IGNORECASE)
+        return query_clean, filters
+
+    # Formato: desde X uf / desde los X uf (precio mínimo)
+    match_desde = re.search(rf"desde\s+(?:los\s+)?{num}{uf_suffix}", qn)
+    if match_desde:
+        val = float(match_desde.group(1).replace(",", "."))
+        filters["precio_uf"] = {"gte": val}
+        query_clean = re.sub(r"desde\s+(?:los\s+)?\d+(?:[.,]\d+)?\s*uf\b", "", query_clean, flags=re.IGNORECASE)
         return query_clean, filters
 
     # Formato: más de X uf / sobre X uf / superior a X uf
