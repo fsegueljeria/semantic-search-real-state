@@ -243,7 +243,9 @@ def main() -> None:
             if response["filters"]:
                 st.caption(f"Filtros: {response['filters']}")
             st.markdown("---")
-            # Cuadrícula de tarjetas compactas
+            # Cuadrícula de tarjetas compactas (misma key que cuando esté en history,
+            # para que los botones del carrusel sigan funcionando tras el re-run)
+            turn_idx = len(st.session_state.history)
             for start in range(0, n, CARDS_PER_ROW):
                 chunk = response["results"][start : start + CARDS_PER_ROW]
                 cols = st.columns(min(len(chunk), CARDS_PER_ROW))
@@ -251,7 +253,7 @@ def main() -> None:
                     with col:
                         _render_property_card_compact(
                             item, start + col_idx + 1,
-                            card_key=f"current_{len(st.session_state.history)}_{start}_{col_idx}",
+                            card_key=f"history_{turn_idx}_{start}_{col_idx}",
                         )
 
     st.session_state.history.append(response)

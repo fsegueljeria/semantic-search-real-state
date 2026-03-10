@@ -5765,3 +5765,1525 @@
 2026-02-23 18:07:21 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 3 (32 texts)
 2026-02-23 18:07:36 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 4 (32 texts)
 2026-02-23 18:07:57 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 5 (32 texts)
+2026-02-23 18:08:17 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 6 (32 texts)
+2026-02-23 18:08:30 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 7 (32 texts)
+2026-02-23 18:08:43 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 8 (32 texts)
+2026-02-23 18:08:59 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 9 (32 texts)
+2026-02-23 18:09:11 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 10 (32 texts)
+2026-02-23 18:09:23 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 11 (32 texts)
+2026-02-23 18:09:38 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 12 (32 texts)
+2026-02-23 18:09:55 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 13 (32 texts)
+2026-02-23 18:10:10 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 14 (32 texts)
+2026-02-23 18:10:24 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 15 (32 texts)
+2026-02-23 18:10:30 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 16 (20 texts)
+2026-02-23 18:10:30 | SUCCESS  | src.etl.loader:process_batch:210 - Prepared 500 points for upload
+2026-02-23 18:10:31 | INFO     | src.db.client:upsert_points:125 - Upserted 500 points to 'real_estate_properties'
+2026-02-23 18:10:31 | INFO     | src.etl.loader:run_pipeline:258 - Batch 6 complete. Progress: Processed: 3000, Embedded: 3000, Uploaded: 3000, Failed: 0
+2026-02-23 18:10:31 | INFO     | src.etl.loader:run_pipeline:242 - Processing batch 7 (500 records)
+2026-02-23 18:10:33 | INFO     | src.etl.loader:process_batch:182 - Generating embeddings for 500 texts
+2026-02-23 18:10:44 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 1 (32 texts)
+2026-02-23 18:10:55 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 2 (32 texts)
+2026-02-23 18:11:10 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 3 (32 texts)
+2026-02-23 18:11:24 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 4 (32 texts)
+2026-02-23 18:11:39 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 5 (32 texts)
+2026-02-23 18:11:55 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 6 (32 texts)
+2026-02-23 18:12:13 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 7 (32 texts)
+2026-02-23 18:12:26 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 8 (32 texts)
+2026-02-23 18:12:38 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 9 (32 texts)
+2026-02-23 18:12:49 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 10 (32 texts)
+2026-02-23 18:13:03 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 11 (32 texts)
+2026-02-23 18:13:15 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 12 (32 texts)
+2026-02-23 18:13:25 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 13 (32 texts)
+2026-02-23 18:13:36 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 14 (32 texts)
+2026-02-23 18:13:46 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 15 (32 texts)
+2026-02-23 18:13:53 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 16 (20 texts)
+2026-02-23 18:13:53 | SUCCESS  | src.etl.loader:process_batch:210 - Prepared 500 points for upload
+2026-02-23 18:13:54 | INFO     | src.db.client:upsert_points:125 - Upserted 500 points to 'real_estate_properties'
+2026-02-23 18:13:54 | INFO     | src.etl.loader:run_pipeline:258 - Batch 7 complete. Progress: Processed: 3500, Embedded: 3500, Uploaded: 3500, Failed: 0
+2026-02-23 18:13:54 | INFO     | src.etl.loader:run_pipeline:242 - Processing batch 8 (500 records)
+2026-02-23 18:13:55 | INFO     | src.etl.loader:process_batch:182 - Generating embeddings for 500 texts
+2026-02-23 18:14:06 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 1 (32 texts)
+2026-02-23 18:14:21 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 2 (32 texts)
+2026-02-23 18:14:33 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 3 (32 texts)
+2026-02-23 18:14:52 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 4 (32 texts)
+2026-02-23 18:22:37 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 5 (32 texts)
+2026-02-23 18:22:49 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 6 (32 texts)
+2026-02-23 18:22:57 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 7 (32 texts)
+2026-02-23 18:23:06 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 8 (32 texts)
+2026-02-23 18:23:14 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 9 (32 texts)
+2026-02-23 18:23:23 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 10 (32 texts)
+2026-02-23 18:23:33 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 11 (32 texts)
+2026-02-23 18:23:42 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 12 (32 texts)
+2026-02-23 18:23:51 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 13 (32 texts)
+2026-02-23 18:24:01 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 14 (32 texts)
+2026-02-23 18:24:12 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 15 (32 texts)
+2026-02-23 18:24:18 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 16 (20 texts)
+2026-02-23 18:24:18 | SUCCESS  | src.etl.loader:process_batch:210 - Prepared 500 points for upload
+2026-02-23 18:24:19 | INFO     | src.db.client:upsert_points:125 - Upserted 500 points to 'real_estate_properties'
+2026-02-23 18:24:19 | INFO     | src.etl.loader:run_pipeline:258 - Batch 8 complete. Progress: Processed: 4000, Embedded: 4000, Uploaded: 4000, Failed: 0
+2026-02-23 18:24:19 | INFO     | src.etl.loader:run_pipeline:242 - Processing batch 9 (500 records)
+2026-02-23 18:24:20 | INFO     | src.etl.loader:process_batch:182 - Generating embeddings for 500 texts
+2026-02-23 18:24:30 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 1 (32 texts)
+2026-02-23 18:24:40 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 2 (32 texts)
+2026-02-23 18:24:50 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 3 (32 texts)
+2026-02-23 18:25:09 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 4 (32 texts)
+2026-02-23 18:25:28 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 5 (32 texts)
+2026-02-23 18:25:45 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 6 (32 texts)
+2026-02-23 18:25:58 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 7 (32 texts)
+2026-02-23 18:26:12 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 8 (32 texts)
+2026-02-23 18:26:24 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 9 (32 texts)
+2026-02-23 18:26:35 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 10 (32 texts)
+2026-02-23 18:26:46 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 11 (32 texts)
+2026-02-23 18:26:54 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 12 (32 texts)
+2026-02-23 18:27:04 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 13 (32 texts)
+2026-02-23 18:27:14 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 14 (32 texts)
+2026-02-23 18:27:26 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 15 (32 texts)
+2026-02-23 18:27:32 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 16 (20 texts)
+2026-02-23 18:27:32 | SUCCESS  | src.etl.loader:process_batch:210 - Prepared 500 points for upload
+2026-02-23 18:27:33 | INFO     | src.db.client:upsert_points:125 - Upserted 500 points to 'real_estate_properties'
+2026-02-23 18:27:33 | INFO     | src.etl.loader:run_pipeline:258 - Batch 9 complete. Progress: Processed: 4500, Embedded: 4500, Uploaded: 4500, Failed: 0
+2026-02-23 18:27:33 | INFO     | src.etl.loader:run_pipeline:242 - Processing batch 10 (500 records)
+2026-02-23 18:27:35 | INFO     | src.etl.loader:process_batch:182 - Generating embeddings for 500 texts
+2026-02-23 18:27:47 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 1 (32 texts)
+2026-02-23 18:27:59 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 2 (32 texts)
+2026-02-23 18:28:12 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 3 (32 texts)
+2026-02-23 18:28:24 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 4 (32 texts)
+2026-02-23 18:28:34 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 5 (32 texts)
+2026-02-23 18:28:45 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 6 (32 texts)
+2026-02-23 18:28:55 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 7 (32 texts)
+2026-02-23 18:29:04 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 8 (32 texts)
+2026-02-23 18:29:15 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 9 (32 texts)
+2026-02-23 18:29:27 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 10 (32 texts)
+2026-02-23 18:29:37 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 11 (32 texts)
+2026-02-23 18:29:49 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 12 (32 texts)
+2026-02-23 18:30:00 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 13 (32 texts)
+2026-02-23 18:30:11 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 14 (32 texts)
+2026-02-23 18:30:26 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 15 (32 texts)
+2026-02-23 18:30:32 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 16 (20 texts)
+2026-02-23 18:30:32 | SUCCESS  | src.etl.loader:process_batch:210 - Prepared 500 points for upload
+2026-02-23 18:30:33 | INFO     | src.db.client:upsert_points:125 - Upserted 500 points to 'real_estate_properties'
+2026-02-23 18:30:33 | INFO     | src.etl.loader:run_pipeline:258 - Batch 10 complete. Progress: Processed: 5000, Embedded: 5000, Uploaded: 5000, Failed: 0
+2026-02-23 18:30:33 | INFO     | src.etl.loader:run_pipeline:242 - Processing batch 11 (500 records)
+2026-02-23 18:30:34 | INFO     | src.etl.loader:process_batch:182 - Generating embeddings for 500 texts
+2026-02-23 18:30:48 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 1 (32 texts)
+2026-02-23 18:31:00 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 2 (32 texts)
+2026-02-23 18:31:11 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 3 (32 texts)
+2026-02-23 18:31:22 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 4 (32 texts)
+2026-02-23 18:31:35 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 5 (32 texts)
+2026-02-23 18:31:46 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 6 (32 texts)
+2026-02-23 18:31:57 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 7 (32 texts)
+2026-02-23 18:32:08 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 8 (32 texts)
+2026-02-23 18:32:20 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 9 (32 texts)
+2026-02-23 18:32:35 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 10 (32 texts)
+2026-02-23 18:32:47 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 11 (32 texts)
+2026-02-23 18:32:58 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 12 (32 texts)
+2026-02-23 18:33:11 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 13 (32 texts)
+2026-02-23 18:33:25 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 14 (32 texts)
+2026-02-23 18:33:42 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 15 (32 texts)
+2026-02-23 18:33:58 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 16 (20 texts)
+2026-02-23 18:33:58 | SUCCESS  | src.etl.loader:process_batch:210 - Prepared 500 points for upload
+2026-02-23 18:33:59 | INFO     | src.db.client:upsert_points:125 - Upserted 500 points to 'real_estate_properties'
+2026-02-23 18:33:59 | INFO     | src.etl.loader:run_pipeline:258 - Batch 11 complete. Progress: Processed: 5500, Embedded: 5500, Uploaded: 5500, Failed: 0
+2026-02-23 18:33:59 | INFO     | src.etl.loader:run_pipeline:242 - Processing batch 12 (500 records)
+2026-02-23 18:34:01 | INFO     | src.etl.loader:process_batch:182 - Generating embeddings for 500 texts
+2026-02-23 18:34:26 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 1 (32 texts)
+2026-02-23 18:34:43 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 2 (32 texts)
+2026-02-23 18:34:55 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 3 (32 texts)
+2026-02-23 18:35:06 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 4 (32 texts)
+2026-02-23 18:35:20 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 5 (32 texts)
+2026-02-23 18:35:34 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 6 (32 texts)
+2026-02-23 18:35:48 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 7 (32 texts)
+2026-02-23 18:36:03 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 8 (32 texts)
+2026-02-23 18:36:22 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 9 (32 texts)
+2026-02-23 18:36:40 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 10 (32 texts)
+2026-02-23 18:37:00 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 11 (32 texts)
+2026-02-23 18:37:17 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 12 (32 texts)
+2026-02-23 18:37:40 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 13 (32 texts)
+2026-02-23 18:38:01 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 14 (32 texts)
+2026-02-23 18:38:14 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 15 (32 texts)
+2026-02-23 18:38:24 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 16 (20 texts)
+2026-02-23 18:38:24 | SUCCESS  | src.etl.loader:process_batch:210 - Prepared 500 points for upload
+2026-02-23 18:38:25 | INFO     | src.db.client:upsert_points:125 - Upserted 500 points to 'real_estate_properties'
+2026-02-23 18:38:25 | INFO     | src.etl.loader:run_pipeline:258 - Batch 12 complete. Progress: Processed: 6000, Embedded: 6000, Uploaded: 6000, Failed: 0
+2026-02-23 18:38:25 | INFO     | src.etl.loader:run_pipeline:242 - Processing batch 13 (500 records)
+2026-02-23 18:38:27 | INFO     | src.etl.loader:process_batch:182 - Generating embeddings for 500 texts
+2026-02-23 18:38:40 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 1 (32 texts)
+2026-02-23 18:38:53 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 2 (32 texts)
+2026-02-23 18:39:08 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 3 (32 texts)
+2026-02-23 18:39:22 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 4 (32 texts)
+2026-02-23 18:39:35 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 5 (32 texts)
+2026-02-23 18:39:48 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 6 (32 texts)
+2026-02-23 18:39:59 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 7 (32 texts)
+2026-02-23 18:40:11 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 8 (32 texts)
+2026-02-23 18:40:25 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 9 (32 texts)
+2026-02-23 18:40:39 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 10 (32 texts)
+2026-02-23 18:40:51 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 11 (32 texts)
+2026-02-23 18:41:03 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 12 (32 texts)
+2026-02-23 18:41:15 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 13 (32 texts)
+2026-02-23 18:41:29 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 14 (32 texts)
+2026-02-23 18:41:41 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 15 (32 texts)
+2026-02-23 18:41:48 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 16 (20 texts)
+2026-02-23 18:41:48 | SUCCESS  | src.etl.loader:process_batch:210 - Prepared 500 points for upload
+2026-02-23 18:41:49 | INFO     | src.db.client:upsert_points:125 - Upserted 500 points to 'real_estate_properties'
+2026-02-23 18:41:49 | INFO     | src.etl.loader:run_pipeline:258 - Batch 13 complete. Progress: Processed: 6500, Embedded: 6500, Uploaded: 6500, Failed: 0
+2026-02-23 18:41:49 | INFO     | src.etl.loader:run_pipeline:242 - Processing batch 14 (500 records)
+2026-02-23 18:41:51 | INFO     | src.etl.loader:process_batch:182 - Generating embeddings for 500 texts
+2026-02-23 18:42:02 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 1 (32 texts)
+2026-02-23 18:42:19 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 2 (32 texts)
+2026-02-23 18:42:31 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 3 (32 texts)
+2026-02-23 18:42:44 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 4 (32 texts)
+2026-02-23 18:42:55 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 5 (32 texts)
+2026-02-23 18:43:11 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 6 (32 texts)
+2026-02-23 18:43:24 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 7 (32 texts)
+2026-02-23 18:43:36 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 8 (32 texts)
+2026-02-23 18:43:48 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 9 (32 texts)
+2026-02-23 18:44:02 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 10 (32 texts)
+2026-02-23 18:44:17 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 11 (32 texts)
+2026-02-23 18:44:39 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 12 (32 texts)
+2026-02-23 18:44:52 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 13 (32 texts)
+2026-02-23 18:45:06 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 14 (32 texts)
+2026-02-23 18:45:24 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 15 (32 texts)
+2026-02-23 18:45:32 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 16 (20 texts)
+2026-02-23 18:45:32 | SUCCESS  | src.etl.loader:process_batch:210 - Prepared 500 points for upload
+2026-02-23 18:45:33 | INFO     | src.db.client:upsert_points:125 - Upserted 500 points to 'real_estate_properties'
+2026-02-23 18:45:33 | INFO     | src.etl.loader:run_pipeline:258 - Batch 14 complete. Progress: Processed: 7000, Embedded: 7000, Uploaded: 7000, Failed: 0
+2026-02-23 18:45:33 | INFO     | src.etl.loader:run_pipeline:242 - Processing batch 15 (500 records)
+2026-02-23 18:45:34 | INFO     | src.etl.loader:process_batch:182 - Generating embeddings for 500 texts
+2026-02-23 18:45:47 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 1 (32 texts)
+2026-02-23 18:46:00 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 2 (32 texts)
+2026-02-23 18:46:13 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 3 (32 texts)
+2026-02-23 18:46:24 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 4 (32 texts)
+2026-02-23 18:46:36 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 5 (32 texts)
+2026-02-23 18:46:47 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 6 (32 texts)
+2026-02-23 18:46:59 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 7 (32 texts)
+2026-02-23 18:47:11 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 8 (32 texts)
+2026-02-23 18:47:23 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 9 (32 texts)
+2026-02-23 18:47:48 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 10 (32 texts)
+2026-02-23 18:48:00 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 11 (32 texts)
+2026-02-23 18:48:13 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 12 (32 texts)
+2026-02-23 19:15:07 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 13 (32 texts)
+2026-02-23 19:15:22 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 14 (32 texts)
+2026-02-23 19:15:36 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 15 (32 texts)
+2026-02-23 19:15:45 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 16 (20 texts)
+2026-02-23 19:15:45 | SUCCESS  | src.etl.loader:process_batch:210 - Prepared 500 points for upload
+2026-02-23 19:15:45 | INFO     | src.db.client:upsert_points:125 - Upserted 500 points to 'real_estate_properties'
+2026-02-23 19:15:45 | INFO     | src.etl.loader:run_pipeline:258 - Batch 15 complete. Progress: Processed: 7500, Embedded: 7500, Uploaded: 7500, Failed: 0
+2026-02-23 19:15:45 | INFO     | src.etl.loader:run_pipeline:242 - Processing batch 16 (500 records)
+2026-02-23 19:15:48 | INFO     | src.etl.loader:process_batch:182 - Generating embeddings for 500 texts
+2026-02-23 19:16:00 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 1 (32 texts)
+2026-02-23 19:16:13 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 2 (32 texts)
+2026-02-23 19:16:25 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 3 (32 texts)
+2026-02-23 19:16:37 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 4 (32 texts)
+2026-02-23 19:16:50 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 5 (32 texts)
+2026-02-23 19:17:09 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 6 (32 texts)
+2026-02-23 19:17:26 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 7 (32 texts)
+2026-02-23 19:17:38 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 8 (32 texts)
+2026-02-23 19:17:49 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 9 (32 texts)
+2026-02-23 19:18:00 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 10 (32 texts)
+2026-02-23 19:18:11 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 11 (32 texts)
+2026-02-23 19:18:23 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 12 (32 texts)
+2026-02-23 19:18:37 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 13 (32 texts)
+2026-02-23 19:18:49 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 14 (32 texts)
+2026-02-23 19:19:02 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 15 (32 texts)
+2026-02-23 19:19:10 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 16 (20 texts)
+2026-02-23 19:19:10 | SUCCESS  | src.etl.loader:process_batch:210 - Prepared 500 points for upload
+2026-02-23 19:19:11 | INFO     | src.db.client:upsert_points:125 - Upserted 500 points to 'real_estate_properties'
+2026-02-23 19:19:11 | INFO     | src.etl.loader:run_pipeline:258 - Batch 16 complete. Progress: Processed: 8000, Embedded: 8000, Uploaded: 8000, Failed: 0
+2026-02-23 19:19:11 | INFO     | src.etl.loader:run_pipeline:242 - Processing batch 17 (500 records)
+2026-02-23 19:19:12 | INFO     | src.etl.loader:process_batch:182 - Generating embeddings for 500 texts
+2026-02-23 19:19:24 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 1 (32 texts)
+2026-02-23 19:19:37 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 2 (32 texts)
+2026-02-23 19:19:50 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 3 (32 texts)
+2026-02-23 19:20:03 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 4 (32 texts)
+2026-02-23 19:20:17 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 5 (32 texts)
+2026-02-23 19:20:29 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 6 (32 texts)
+2026-02-23 19:20:41 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 7 (32 texts)
+2026-02-23 19:20:59 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 8 (32 texts)
+2026-02-23 19:21:16 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 9 (32 texts)
+2026-02-23 19:21:28 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 10 (32 texts)
+2026-02-23 19:21:39 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 11 (32 texts)
+2026-02-23 19:21:51 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 12 (32 texts)
+2026-02-23 19:22:05 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 13 (32 texts)
+2026-02-23 19:22:22 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 14 (32 texts)
+2026-02-23 19:22:36 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 15 (32 texts)
+2026-02-23 19:22:45 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 16 (20 texts)
+2026-02-23 19:22:45 | SUCCESS  | src.etl.loader:process_batch:210 - Prepared 500 points for upload
+2026-02-23 19:22:46 | INFO     | src.db.client:upsert_points:125 - Upserted 500 points to 'real_estate_properties'
+2026-02-23 19:22:46 | INFO     | src.etl.loader:run_pipeline:258 - Batch 17 complete. Progress: Processed: 8500, Embedded: 8500, Uploaded: 8500, Failed: 0
+2026-02-23 19:22:46 | INFO     | src.etl.loader:run_pipeline:242 - Processing batch 18 (500 records)
+2026-02-23 19:22:48 | INFO     | src.etl.loader:process_batch:182 - Generating embeddings for 500 texts
+2026-02-23 19:23:02 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 1 (32 texts)
+2026-02-23 19:23:14 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 2 (32 texts)
+2026-02-23 19:23:27 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 3 (32 texts)
+2026-02-23 19:23:41 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 4 (32 texts)
+2026-02-23 19:23:55 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 5 (32 texts)
+2026-02-23 19:24:11 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 6 (32 texts)
+2026-02-23 19:24:25 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 7 (32 texts)
+2026-02-23 19:24:39 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 8 (32 texts)
+2026-02-23 19:24:52 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 9 (32 texts)
+2026-02-23 19:25:06 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 10 (32 texts)
+2026-02-23 19:25:21 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 11 (32 texts)
+2026-02-23 19:25:33 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 12 (32 texts)
+2026-02-23 19:25:47 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 13 (32 texts)
+2026-02-23 19:26:02 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 14 (32 texts)
+2026-02-23 19:26:17 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 15 (32 texts)
+2026-02-23 19:26:25 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 16 (20 texts)
+2026-02-23 19:26:25 | SUCCESS  | src.etl.loader:process_batch:210 - Prepared 500 points for upload
+2026-02-23 19:26:26 | INFO     | src.db.client:upsert_points:125 - Upserted 500 points to 'real_estate_properties'
+2026-02-23 19:26:26 | INFO     | src.etl.loader:run_pipeline:258 - Batch 18 complete. Progress: Processed: 9000, Embedded: 9000, Uploaded: 9000, Failed: 0
+2026-02-23 19:26:26 | INFO     | src.etl.loader:run_pipeline:242 - Processing batch 19 (500 records)
+2026-02-23 19:26:27 | INFO     | src.etl.loader:process_batch:182 - Generating embeddings for 500 texts
+2026-02-23 19:26:39 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 1 (32 texts)
+2026-02-23 19:26:53 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 2 (32 texts)
+2026-02-23 19:32:58 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 3 (32 texts)
+2026-02-23 19:33:14 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 4 (32 texts)
+2026-02-23 19:33:26 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 5 (32 texts)
+2026-02-23 19:33:38 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 6 (32 texts)
+2026-02-23 19:33:49 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 7 (32 texts)
+2026-02-23 19:34:00 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 8 (32 texts)
+2026-02-23 19:34:13 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 9 (32 texts)
+2026-02-23 19:34:49 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 10 (32 texts)
+2026-02-23 19:35:10 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 11 (32 texts)
+2026-02-23 19:35:25 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 12 (32 texts)
+2026-02-23 19:35:40 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 13 (32 texts)
+2026-02-23 19:36:01 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 14 (32 texts)
+2026-02-23 19:36:32 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 15 (32 texts)
+2026-02-23 19:36:47 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 16 (20 texts)
+2026-02-23 19:36:49 | SUCCESS  | src.etl.loader:process_batch:210 - Prepared 500 points for upload
+2026-02-23 19:36:50 | INFO     | src.db.client:upsert_points:125 - Upserted 500 points to 'real_estate_properties'
+2026-02-23 19:36:50 | INFO     | src.etl.loader:run_pipeline:258 - Batch 19 complete. Progress: Processed: 9500, Embedded: 9500, Uploaded: 9500, Failed: 0
+2026-02-23 19:36:51 | INFO     | src.etl.loader:run_pipeline:242 - Processing batch 20 (500 records)
+2026-02-23 19:36:53 | INFO     | src.etl.loader:process_batch:182 - Generating embeddings for 500 texts
+2026-02-23 19:37:24 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 1 (32 texts)
+2026-02-23 19:37:48 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 2 (32 texts)
+2026-02-23 19:38:16 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 3 (32 texts)
+2026-02-23 19:38:35 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 4 (32 texts)
+2026-02-23 19:38:47 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 5 (32 texts)
+2026-02-23 19:38:59 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 6 (32 texts)
+2026-02-23 19:39:17 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 7 (32 texts)
+2026-02-23 19:39:39 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 8 (32 texts)
+2026-02-23 19:40:11 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 9 (32 texts)
+2026-02-23 19:40:32 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 10 (32 texts)
+2026-02-23 19:40:52 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 11 (32 texts)
+2026-02-23 19:41:10 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 12 (32 texts)
+2026-02-23 19:41:27 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 13 (32 texts)
+2026-02-23 19:41:45 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 14 (32 texts)
+2026-02-23 19:42:16 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 15 (32 texts)
+2026-02-23 19:42:25 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 16 (20 texts)
+2026-02-23 19:42:25 | SUCCESS  | src.etl.loader:process_batch:210 - Prepared 500 points for upload
+2026-02-23 19:42:26 | INFO     | src.db.client:upsert_points:125 - Upserted 500 points to 'real_estate_properties'
+2026-02-23 19:42:26 | INFO     | src.etl.loader:run_pipeline:258 - Batch 20 complete. Progress: Processed: 10000, Embedded: 10000, Uploaded: 10000, Failed: 0
+2026-02-23 19:42:26 | INFO     | src.etl.loader:run_pipeline:242 - Processing batch 21 (500 records)
+2026-02-23 19:42:28 | INFO     | src.etl.loader:process_batch:182 - Generating embeddings for 500 texts
+2026-02-23 19:42:40 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 1 (32 texts)
+2026-02-23 19:42:55 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 2 (32 texts)
+2026-02-23 19:43:07 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 3 (32 texts)
+2026-02-23 19:43:21 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 4 (32 texts)
+2026-02-23 19:43:37 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 5 (32 texts)
+2026-02-23 19:43:52 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 6 (32 texts)
+2026-02-23 19:44:09 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 7 (32 texts)
+2026-02-23 19:44:22 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 8 (32 texts)
+2026-02-23 19:44:36 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 9 (32 texts)
+2026-02-23 19:44:50 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 10 (32 texts)
+2026-02-23 19:45:08 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 11 (32 texts)
+2026-02-23 19:45:23 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 12 (32 texts)
+2026-02-23 19:45:36 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 13 (32 texts)
+2026-02-23 19:45:48 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 14 (32 texts)
+2026-02-23 19:46:06 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 15 (32 texts)
+2026-02-23 19:46:14 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 16 (20 texts)
+2026-02-23 19:46:14 | SUCCESS  | src.etl.loader:process_batch:210 - Prepared 500 points for upload
+2026-02-23 19:46:15 | INFO     | src.db.client:upsert_points:125 - Upserted 500 points to 'real_estate_properties'
+2026-02-23 19:46:15 | INFO     | src.etl.loader:run_pipeline:258 - Batch 21 complete. Progress: Processed: 10500, Embedded: 10500, Uploaded: 10500, Failed: 0
+2026-02-23 19:46:15 | INFO     | src.etl.loader:run_pipeline:242 - Processing batch 22 (500 records)
+2026-02-23 19:46:17 | INFO     | src.etl.loader:process_batch:182 - Generating embeddings for 500 texts
+2026-02-23 19:46:30 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 1 (32 texts)
+2026-02-23 19:46:47 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 2 (32 texts)
+2026-02-23 19:47:04 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 3 (32 texts)
+2026-02-23 19:47:18 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 4 (32 texts)
+2026-02-23 19:47:35 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 5 (32 texts)
+2026-02-23 19:47:49 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 6 (32 texts)
+2026-02-23 19:48:11 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 7 (32 texts)
+2026-02-23 19:48:35 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 8 (32 texts)
+2026-02-23 19:48:57 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 9 (32 texts)
+2026-02-23 19:49:14 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 10 (32 texts)
+2026-02-23 19:49:29 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 11 (32 texts)
+2026-02-23 19:49:44 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 12 (32 texts)
+2026-02-23 19:50:04 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 13 (32 texts)
+2026-02-23 19:50:25 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 14 (32 texts)
+2026-02-23 19:50:40 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 15 (32 texts)
+2026-02-23 19:50:55 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 16 (20 texts)
+2026-02-23 19:50:55 | SUCCESS  | src.etl.loader:process_batch:210 - Prepared 500 points for upload
+2026-02-23 19:50:57 | INFO     | src.db.client:upsert_points:125 - Upserted 500 points to 'real_estate_properties'
+2026-02-23 19:50:57 | INFO     | src.etl.loader:run_pipeline:258 - Batch 22 complete. Progress: Processed: 11000, Embedded: 11000, Uploaded: 11000, Failed: 0
+2026-02-23 19:50:57 | INFO     | src.etl.loader:run_pipeline:242 - Processing batch 23 (500 records)
+2026-02-23 19:51:00 | INFO     | src.etl.loader:process_batch:182 - Generating embeddings for 500 texts
+2026-02-23 19:51:50 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 1 (32 texts)
+2026-02-23 19:52:10 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 2 (32 texts)
+2026-02-23 19:52:33 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 3 (32 texts)
+2026-02-23 19:52:48 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 4 (32 texts)
+2026-02-23 19:53:02 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 5 (32 texts)
+2026-02-23 19:53:15 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 6 (32 texts)
+2026-02-23 19:53:27 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 7 (32 texts)
+2026-02-23 19:53:37 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 8 (32 texts)
+2026-02-23 19:53:47 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 9 (32 texts)
+2026-02-23 19:54:00 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 10 (32 texts)
+2026-02-23 19:54:14 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 11 (32 texts)
+2026-02-23 19:54:28 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 12 (32 texts)
+2026-02-23 20:15:18 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 13 (32 texts)
+2026-02-23 20:15:37 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 14 (32 texts)
+2026-02-23 20:15:49 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 15 (32 texts)
+2026-02-23 20:15:55 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 16 (20 texts)
+2026-02-23 20:15:55 | SUCCESS  | src.etl.loader:process_batch:210 - Prepared 500 points for upload
+2026-02-23 20:15:56 | INFO     | src.db.client:upsert_points:125 - Upserted 500 points to 'real_estate_properties'
+2026-02-23 20:15:56 | INFO     | src.etl.loader:run_pipeline:258 - Batch 23 complete. Progress: Processed: 11500, Embedded: 11500, Uploaded: 11500, Failed: 0
+2026-02-23 20:15:56 | INFO     | src.etl.loader:run_pipeline:242 - Processing batch 24 (500 records)
+2026-02-23 20:15:58 | INFO     | src.etl.loader:process_batch:182 - Generating embeddings for 500 texts
+2026-02-23 20:16:10 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 1 (32 texts)
+2026-02-23 20:16:21 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 2 (32 texts)
+2026-02-23 20:16:31 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 3 (32 texts)
+2026-02-23 20:16:41 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 4 (32 texts)
+2026-02-23 20:16:55 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 5 (32 texts)
+2026-02-23 20:17:06 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 6 (32 texts)
+2026-02-23 20:17:18 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 7 (32 texts)
+2026-02-23 20:17:28 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 8 (32 texts)
+2026-02-23 20:17:37 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 9 (32 texts)
+2026-02-23 20:17:48 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 10 (32 texts)
+2026-02-23 20:18:02 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 11 (32 texts)
+2026-02-23 20:18:15 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 12 (32 texts)
+2026-02-23 20:18:27 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 13 (32 texts)
+2026-02-23 20:18:37 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 14 (32 texts)
+2026-02-23 20:18:48 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 15 (32 texts)
+2026-02-23 20:18:54 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 16 (20 texts)
+2026-02-23 20:18:54 | SUCCESS  | src.etl.loader:process_batch:210 - Prepared 500 points for upload
+2026-02-23 20:18:55 | INFO     | src.db.client:upsert_points:125 - Upserted 500 points to 'real_estate_properties'
+2026-02-23 20:18:55 | INFO     | src.etl.loader:run_pipeline:258 - Batch 24 complete. Progress: Processed: 12000, Embedded: 12000, Uploaded: 12000, Failed: 0
+2026-02-23 20:18:55 | INFO     | src.etl.loader:run_pipeline:242 - Processing batch 25 (500 records)
+2026-02-23 20:18:56 | INFO     | src.etl.loader:process_batch:182 - Generating embeddings for 500 texts
+2026-02-23 20:19:09 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 1 (32 texts)
+2026-02-23 20:19:19 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 2 (32 texts)
+2026-02-23 20:19:30 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 3 (32 texts)
+2026-02-23 20:19:41 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 4 (32 texts)
+2026-02-23 20:19:52 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 5 (32 texts)
+2026-02-23 20:20:05 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 6 (32 texts)
+2026-02-23 21:10:00 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 7 (32 texts)
+2026-02-23 21:10:13 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 8 (32 texts)
+2026-02-23 21:10:28 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 9 (32 texts)
+2026-02-23 21:10:41 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 10 (32 texts)
+2026-02-23 21:10:53 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 11 (32 texts)
+2026-02-23 21:11:05 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 12 (32 texts)
+2026-02-23 21:11:15 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 13 (32 texts)
+2026-02-23 21:11:25 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 14 (32 texts)
+2026-02-23 21:11:35 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 15 (32 texts)
+2026-02-23 21:11:42 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 16 (20 texts)
+2026-02-23 21:11:42 | SUCCESS  | src.etl.loader:process_batch:210 - Prepared 500 points for upload
+2026-02-23 21:11:43 | INFO     | src.db.client:upsert_points:125 - Upserted 500 points to 'real_estate_properties'
+2026-02-23 21:11:43 | INFO     | src.etl.loader:run_pipeline:258 - Batch 25 complete. Progress: Processed: 12500, Embedded: 12500, Uploaded: 12500, Failed: 0
+2026-02-23 21:11:43 | INFO     | src.etl.loader:run_pipeline:242 - Processing batch 26 (500 records)
+2026-02-23 21:11:43 | INFO     | src.etl.loader:process_batch:182 - Generating embeddings for 500 texts
+2026-02-23 21:11:52 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 1 (32 texts)
+2026-02-23 21:12:03 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 2 (32 texts)
+2026-02-23 21:12:17 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 3 (32 texts)
+2026-02-23 21:12:26 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 4 (32 texts)
+2026-02-23 21:12:36 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 5 (32 texts)
+2026-02-23 21:12:49 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 6 (32 texts)
+2026-02-23 21:12:58 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 7 (32 texts)
+2026-02-23 21:13:09 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 8 (32 texts)
+2026-02-23 21:13:28 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 9 (32 texts)
+2026-02-23 21:13:41 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 10 (32 texts)
+2026-02-23 21:13:54 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 11 (32 texts)
+2026-02-23 21:14:06 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 12 (32 texts)
+2026-02-23 21:14:20 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 13 (32 texts)
+2026-02-23 21:14:33 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 14 (32 texts)
+2026-02-23 21:14:45 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 15 (32 texts)
+2026-02-23 21:14:51 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 16 (20 texts)
+2026-02-23 21:14:51 | SUCCESS  | src.etl.loader:process_batch:210 - Prepared 500 points for upload
+2026-02-23 21:14:52 | INFO     | src.db.client:upsert_points:125 - Upserted 500 points to 'real_estate_properties'
+2026-02-23 21:14:52 | INFO     | src.etl.loader:run_pipeline:258 - Batch 26 complete. Progress: Processed: 13000, Embedded: 13000, Uploaded: 13000, Failed: 0
+2026-02-23 21:14:52 | INFO     | src.etl.loader:run_pipeline:242 - Processing batch 27 (500 records)
+2026-02-23 21:14:53 | INFO     | src.etl.loader:process_batch:182 - Generating embeddings for 500 texts
+2026-02-23 21:15:03 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 1 (32 texts)
+2026-02-23 21:15:14 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 2 (32 texts)
+2026-02-23 21:15:24 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 3 (32 texts)
+2026-02-23 21:15:34 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 4 (32 texts)
+2026-02-23 21:15:46 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 5 (32 texts)
+2026-02-23 21:15:58 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 6 (32 texts)
+2026-02-23 21:16:09 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 7 (32 texts)
+2026-02-23 21:16:21 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 8 (32 texts)
+2026-02-23 21:16:33 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 9 (32 texts)
+2026-02-23 21:30:19 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 10 (32 texts)
+2026-02-23 21:30:31 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 11 (32 texts)
+2026-02-23 21:30:41 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 12 (32 texts)
+2026-02-23 21:30:50 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 13 (32 texts)
+2026-02-23 21:31:00 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 14 (32 texts)
+2026-02-23 21:31:10 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 15 (32 texts)
+2026-02-23 21:31:18 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 16 (20 texts)
+2026-02-23 21:31:18 | SUCCESS  | src.etl.loader:process_batch:210 - Prepared 500 points for upload
+2026-02-23 21:31:19 | INFO     | src.db.client:upsert_points:125 - Upserted 500 points to 'real_estate_properties'
+2026-02-23 21:31:19 | INFO     | src.etl.loader:run_pipeline:258 - Batch 27 complete. Progress: Processed: 13500, Embedded: 13500, Uploaded: 13500, Failed: 0
+2026-02-23 21:31:19 | INFO     | src.etl.loader:run_pipeline:242 - Processing batch 28 (500 records)
+2026-02-23 21:31:20 | INFO     | src.etl.loader:process_batch:182 - Generating embeddings for 500 texts
+2026-02-23 21:31:36 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 1 (32 texts)
+2026-02-23 21:31:50 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 2 (32 texts)
+2026-02-23 21:32:03 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 3 (32 texts)
+2026-02-23 21:32:16 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 4 (32 texts)
+2026-02-23 21:32:26 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 5 (32 texts)
+2026-02-23 21:32:36 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 6 (32 texts)
+2026-02-23 21:32:47 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 7 (32 texts)
+2026-02-23 21:32:59 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 8 (32 texts)
+2026-02-23 21:33:13 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 9 (32 texts)
+2026-02-23 21:33:27 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 10 (32 texts)
+2026-02-23 21:33:39 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 11 (32 texts)
+2026-02-23 21:39:53 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 12 (32 texts)
+2026-02-23 21:40:05 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 13 (32 texts)
+2026-02-23 22:55:46 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 14 (32 texts)
+2026-02-23 23:40:19 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 15 (32 texts)
+2026-02-24 00:41:23 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 16 (20 texts)
+2026-02-24 00:41:23 | SUCCESS  | src.etl.loader:process_batch:210 - Prepared 500 points for upload
+2026-02-24 00:41:24 | INFO     | src.db.client:upsert_points:125 - Upserted 500 points to 'real_estate_properties'
+2026-02-24 00:41:24 | INFO     | src.etl.loader:run_pipeline:258 - Batch 28 complete. Progress: Processed: 14000, Embedded: 14000, Uploaded: 14000, Failed: 0
+2026-02-24 00:41:25 | INFO     | src.etl.loader:run_pipeline:242 - Processing batch 29 (500 records)
+2026-02-24 00:41:26 | INFO     | src.etl.loader:process_batch:182 - Generating embeddings for 500 texts
+2026-02-24 01:42:33 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 1 (32 texts)
+2026-02-24 05:14:06 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 2 (32 texts)
+2026-02-24 06:01:10 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 3 (32 texts)
+2026-02-24 07:24:21 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 4 (32 texts)
+2026-02-24 07:24:38 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 5 (32 texts)
+2026-02-24 07:24:49 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 6 (32 texts)
+2026-02-24 07:25:04 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 7 (32 texts)
+2026-02-24 07:25:21 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 8 (32 texts)
+2026-02-24 07:25:31 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 9 (32 texts)
+2026-02-24 07:25:42 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 10 (32 texts)
+2026-02-24 07:25:54 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 11 (32 texts)
+2026-02-24 07:26:05 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 12 (32 texts)
+2026-02-24 07:26:17 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 13 (32 texts)
+2026-02-24 07:26:27 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 14 (32 texts)
+2026-02-24 07:26:36 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 15 (32 texts)
+2026-02-24 07:26:44 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 16 (20 texts)
+2026-02-24 07:26:44 | SUCCESS  | src.etl.loader:process_batch:210 - Prepared 500 points for upload
+2026-02-24 07:26:45 | INFO     | src.db.client:upsert_points:125 - Upserted 500 points to 'real_estate_properties'
+2026-02-24 07:26:45 | INFO     | src.etl.loader:run_pipeline:258 - Batch 29 complete. Progress: Processed: 14500, Embedded: 14500, Uploaded: 14500, Failed: 0
+2026-02-24 07:26:45 | INFO     | src.etl.loader:run_pipeline:242 - Processing batch 30 (500 records)
+2026-02-24 07:26:45 | WARNING  | src.etl.cleaner:clean_numeric:81 - Could not convert '3-05' to numeric, using default: 0.0
+2026-02-24 07:26:45 | WARNING  | src.etl.cleaner:clean_numeric:81 - Could not convert '3-05' to numeric, using default: 0.0
+2026-02-24 07:26:45 | INFO     | src.etl.loader:process_batch:182 - Generating embeddings for 500 texts
+2026-02-24 07:26:57 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 1 (32 texts)
+2026-02-24 07:27:12 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 2 (32 texts)
+2026-02-24 07:27:22 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 3 (32 texts)
+2026-02-24 07:27:33 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 4 (32 texts)
+2026-02-24 07:27:45 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 5 (32 texts)
+2026-02-24 07:27:56 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 6 (32 texts)
+2026-02-24 07:28:07 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 7 (32 texts)
+2026-02-24 07:28:19 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 8 (32 texts)
+2026-02-24 07:28:28 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 9 (32 texts)
+2026-02-24 07:28:39 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 10 (32 texts)
+2026-02-24 07:28:54 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 11 (32 texts)
+2026-02-24 07:29:03 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 12 (32 texts)
+2026-02-24 07:29:12 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 13 (32 texts)
+2026-02-24 07:29:23 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 14 (32 texts)
+2026-02-24 07:29:32 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 15 (32 texts)
+2026-02-24 07:29:38 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 16 (20 texts)
+2026-02-24 07:29:38 | SUCCESS  | src.etl.loader:process_batch:210 - Prepared 500 points for upload
+2026-02-24 07:29:39 | INFO     | src.db.client:upsert_points:125 - Upserted 500 points to 'real_estate_properties'
+2026-02-24 07:29:39 | INFO     | src.etl.loader:run_pipeline:258 - Batch 30 complete. Progress: Processed: 15000, Embedded: 15000, Uploaded: 15000, Failed: 0
+2026-02-24 07:29:39 | INFO     | src.etl.loader:run_pipeline:242 - Processing batch 31 (500 records)
+2026-02-24 07:29:40 | INFO     | src.etl.loader:process_batch:182 - Generating embeddings for 500 texts
+2026-02-24 07:29:49 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 1 (32 texts)
+2026-02-24 07:29:59 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 2 (32 texts)
+2026-02-24 07:30:10 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 3 (32 texts)
+2026-02-24 07:30:21 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 4 (32 texts)
+2026-02-24 07:30:30 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 5 (32 texts)
+2026-02-24 07:30:40 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 6 (32 texts)
+2026-02-24 07:30:50 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 7 (32 texts)
+2026-02-24 07:30:59 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 8 (32 texts)
+2026-02-24 07:31:09 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 9 (32 texts)
+2026-02-24 07:31:19 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 10 (32 texts)
+2026-02-24 07:31:28 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 11 (32 texts)
+2026-02-24 07:31:38 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 12 (32 texts)
+2026-02-24 07:31:48 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 13 (32 texts)
+2026-02-24 07:31:59 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 14 (32 texts)
+2026-02-24 07:32:11 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 15 (32 texts)
+2026-02-24 07:32:17 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 16 (20 texts)
+2026-02-24 07:32:17 | SUCCESS  | src.etl.loader:process_batch:210 - Prepared 500 points for upload
+2026-02-24 07:32:18 | INFO     | src.db.client:upsert_points:125 - Upserted 500 points to 'real_estate_properties'
+2026-02-24 07:32:18 | INFO     | src.etl.loader:run_pipeline:258 - Batch 31 complete. Progress: Processed: 15500, Embedded: 15500, Uploaded: 15500, Failed: 0
+2026-02-24 07:32:18 | INFO     | src.etl.loader:run_pipeline:242 - Processing batch 32 (500 records)
+2026-02-24 07:32:18 | DEBUG    | src.etl.cleaner:clean_coordinates:111 - Coordinates out of Chile bounds, setting to zero: (-28.7754781, -59.2377089)
+2026-02-24 07:32:19 | INFO     | src.etl.loader:process_batch:182 - Generating embeddings for 500 texts
+2026-02-24 07:32:30 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 1 (32 texts)
+2026-02-24 07:32:40 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 2 (32 texts)
+2026-02-24 07:32:55 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 3 (32 texts)
+2026-02-24 07:33:06 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 4 (32 texts)
+2026-02-24 07:33:18 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 5 (32 texts)
+2026-02-24 07:33:31 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 6 (32 texts)
+2026-02-24 07:33:46 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 7 (32 texts)
+2026-02-24 07:33:56 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 8 (32 texts)
+2026-02-24 07:34:06 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 9 (32 texts)
+2026-02-24 07:34:16 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 10 (32 texts)
+2026-02-24 07:34:29 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 11 (32 texts)
+2026-02-24 07:34:46 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 12 (32 texts)
+2026-02-24 07:35:03 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 13 (32 texts)
+2026-02-24 07:35:19 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 14 (32 texts)
+2026-02-24 07:35:34 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 15 (32 texts)
+2026-02-24 07:35:44 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 16 (20 texts)
+2026-02-24 07:35:44 | SUCCESS  | src.etl.loader:process_batch:210 - Prepared 500 points for upload
+2026-02-24 07:35:45 | INFO     | src.db.client:upsert_points:125 - Upserted 500 points to 'real_estate_properties'
+2026-02-24 07:35:45 | INFO     | src.etl.loader:run_pipeline:258 - Batch 32 complete. Progress: Processed: 16000, Embedded: 16000, Uploaded: 16000, Failed: 0
+2026-02-24 07:35:45 | INFO     | src.etl.loader:run_pipeline:242 - Processing batch 33 (500 records)
+2026-02-24 07:35:46 | INFO     | src.etl.loader:process_batch:182 - Generating embeddings for 500 texts
+2026-02-24 07:35:59 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 1 (32 texts)
+2026-02-24 07:36:13 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 2 (32 texts)
+2026-02-24 07:36:23 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 3 (32 texts)
+2026-02-24 08:22:09 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 4 (32 texts)
+2026-02-24 09:35:53 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 5 (32 texts)
+2026-02-24 10:38:21 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 6 (32 texts)
+2026-02-24 11:15:30 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 7 (32 texts)
+2026-02-24 11:15:41 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 8 (32 texts)
+2026-02-24 11:15:50 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 9 (32 texts)
+2026-02-24 11:24:49 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 10 (32 texts)
+2026-02-24 11:24:58 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 11 (32 texts)
+2026-02-24 11:39:27 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 12 (32 texts)
+2026-02-24 11:43:42 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 13 (32 texts)
+2026-02-24 13:41:48 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 14 (32 texts)
+2026-02-24 15:44:27 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 15 (32 texts)
+2026-02-24 16:45:11 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 16 (20 texts)
+2026-02-24 16:45:12 | SUCCESS  | src.etl.loader:process_batch:210 - Prepared 500 points for upload
+2026-02-24 17:46:12 | INFO     | src.db.client:upsert_points:125 - Upserted 500 points to 'real_estate_properties'
+2026-02-24 17:46:12 | INFO     | src.etl.loader:run_pipeline:258 - Batch 33 complete. Progress: Processed: 16500, Embedded: 16500, Uploaded: 16500, Failed: 0
+2026-02-24 17:46:12 | INFO     | src.etl.loader:run_pipeline:242 - Processing batch 34 (500 records)
+2026-02-24 17:46:16 | INFO     | src.etl.loader:process_batch:182 - Generating embeddings for 500 texts
+2026-02-24 18:47:24 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 1 (32 texts)
+2026-02-24 18:48:19 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 2 (32 texts)
+2026-02-24 19:37:37 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 3 (32 texts)
+2026-02-24 20:49:42 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 4 (32 texts)
+2026-02-24 21:33:57 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 5 (32 texts)
+2026-02-24 21:34:06 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 6 (32 texts)
+2026-02-24 21:34:16 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 7 (32 texts)
+2026-02-24 21:34:29 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 8 (32 texts)
+2026-02-24 21:34:38 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 9 (32 texts)
+2026-02-24 21:34:51 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 10 (32 texts)
+2026-02-24 21:34:59 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 11 (32 texts)
+2026-02-24 21:35:13 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 12 (32 texts)
+2026-02-24 21:35:22 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 13 (32 texts)
+2026-02-24 21:35:34 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 14 (32 texts)
+2026-02-24 21:35:45 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 15 (32 texts)
+2026-02-24 21:35:55 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 16 (20 texts)
+2026-02-24 21:35:55 | SUCCESS  | src.etl.loader:process_batch:210 - Prepared 500 points for upload
+2026-02-24 21:35:57 | INFO     | src.db.client:upsert_points:125 - Upserted 500 points to 'real_estate_properties'
+2026-02-24 21:35:57 | INFO     | src.etl.loader:run_pipeline:258 - Batch 34 complete. Progress: Processed: 17000, Embedded: 17000, Uploaded: 17000, Failed: 0
+2026-02-24 21:35:57 | INFO     | src.etl.loader:run_pipeline:242 - Processing batch 35 (500 records)
+2026-02-24 21:35:59 | INFO     | src.etl.loader:process_batch:182 - Generating embeddings for 500 texts
+2026-02-24 21:36:16 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 1 (32 texts)
+2026-02-24 21:36:32 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 2 (32 texts)
+2026-02-24 21:36:49 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 3 (32 texts)
+2026-02-24 21:37:08 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 4 (32 texts)
+2026-02-24 21:37:29 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 5 (32 texts)
+2026-02-24 21:37:46 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 6 (32 texts)
+2026-02-24 21:38:00 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 7 (32 texts)
+2026-02-24 21:38:14 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 8 (32 texts)
+2026-02-24 21:38:23 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 9 (32 texts)
+2026-02-24 21:38:31 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 10 (32 texts)
+2026-02-24 21:38:39 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 11 (32 texts)
+2026-02-24 21:38:48 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 12 (32 texts)
+2026-02-24 21:38:56 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 13 (32 texts)
+2026-02-24 21:39:05 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 14 (32 texts)
+2026-02-24 21:39:16 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 15 (32 texts)
+2026-02-24 21:39:23 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 16 (20 texts)
+2026-02-24 21:39:23 | SUCCESS  | src.etl.loader:process_batch:210 - Prepared 500 points for upload
+2026-02-24 21:39:24 | INFO     | src.db.client:upsert_points:125 - Upserted 500 points to 'real_estate_properties'
+2026-02-24 21:39:24 | INFO     | src.etl.loader:run_pipeline:258 - Batch 35 complete. Progress: Processed: 17500, Embedded: 17500, Uploaded: 17500, Failed: 0
+2026-02-24 21:39:24 | INFO     | src.etl.loader:run_pipeline:242 - Processing batch 36 (500 records)
+2026-02-24 21:39:26 | INFO     | src.etl.loader:process_batch:182 - Generating embeddings for 500 texts
+2026-02-24 21:39:35 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 1 (32 texts)
+2026-02-24 21:39:44 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 2 (32 texts)
+2026-02-24 21:39:52 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 3 (32 texts)
+2026-02-24 21:40:02 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 4 (32 texts)
+2026-02-24 21:40:10 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 5 (32 texts)
+2026-02-24 21:40:18 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 6 (32 texts)
+2026-02-24 21:40:27 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 7 (32 texts)
+2026-02-24 21:40:40 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 8 (32 texts)
+2026-02-24 21:40:49 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 9 (32 texts)
+2026-02-24 21:40:58 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 10 (32 texts)
+2026-02-24 21:41:07 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 11 (32 texts)
+2026-02-24 21:41:24 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 12 (32 texts)
+2026-02-24 21:41:37 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 13 (32 texts)
+2026-02-24 21:41:52 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 14 (32 texts)
+2026-02-24 21:42:04 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 15 (32 texts)
+2026-02-24 21:42:13 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 16 (20 texts)
+2026-02-24 21:42:13 | SUCCESS  | src.etl.loader:process_batch:210 - Prepared 500 points for upload
+2026-02-24 21:42:15 | INFO     | src.db.client:upsert_points:125 - Upserted 500 points to 'real_estate_properties'
+2026-02-24 21:42:15 | INFO     | src.etl.loader:run_pipeline:258 - Batch 36 complete. Progress: Processed: 18000, Embedded: 18000, Uploaded: 18000, Failed: 0
+2026-02-24 21:42:15 | INFO     | src.etl.loader:run_pipeline:242 - Processing batch 37 (500 records)
+2026-02-24 21:42:16 | INFO     | src.etl.loader:process_batch:182 - Generating embeddings for 500 texts
+2026-02-24 21:42:34 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 1 (32 texts)
+2026-02-24 21:42:54 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 2 (32 texts)
+2026-02-24 21:43:08 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 3 (32 texts)
+2026-02-24 21:43:23 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 4 (32 texts)
+2026-02-24 21:43:36 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 5 (32 texts)
+2026-02-24 21:43:49 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 6 (32 texts)
+2026-02-24 21:44:01 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 7 (32 texts)
+2026-02-24 21:44:13 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 8 (32 texts)
+2026-02-24 21:44:21 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 9 (32 texts)
+2026-02-24 21:44:29 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 10 (32 texts)
+2026-02-24 21:44:40 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 11 (32 texts)
+2026-02-24 21:44:51 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 12 (32 texts)
+2026-02-24 21:45:01 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 13 (32 texts)
+2026-02-24 21:45:10 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 14 (32 texts)
+2026-02-24 21:45:20 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 15 (32 texts)
+2026-02-24 21:45:26 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 16 (20 texts)
+2026-02-24 21:45:26 | SUCCESS  | src.etl.loader:process_batch:210 - Prepared 500 points for upload
+2026-02-24 21:45:27 | INFO     | src.db.client:upsert_points:125 - Upserted 500 points to 'real_estate_properties'
+2026-02-24 21:45:27 | INFO     | src.etl.loader:run_pipeline:258 - Batch 37 complete. Progress: Processed: 18500, Embedded: 18500, Uploaded: 18500, Failed: 0
+2026-02-24 21:45:27 | INFO     | src.etl.loader:run_pipeline:242 - Processing batch 38 (500 records)
+2026-02-24 21:45:28 | INFO     | src.etl.loader:process_batch:182 - Generating embeddings for 500 texts
+2026-02-24 21:45:38 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 1 (32 texts)
+2026-02-24 21:45:49 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 2 (32 texts)
+2026-02-24 21:46:00 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 3 (32 texts)
+2026-02-24 21:46:13 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 4 (32 texts)
+2026-02-24 21:46:23 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 5 (32 texts)
+2026-02-24 21:46:32 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 6 (32 texts)
+2026-02-24 21:46:41 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 7 (32 texts)
+2026-02-24 21:46:52 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 8 (32 texts)
+2026-02-24 21:47:02 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 9 (32 texts)
+2026-02-24 21:47:13 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 10 (32 texts)
+2026-02-24 21:47:22 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 11 (32 texts)
+2026-02-24 21:47:34 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 12 (32 texts)
+2026-02-24 21:47:46 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 13 (32 texts)
+2026-02-24 21:47:56 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 14 (32 texts)
+2026-02-24 21:48:10 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 15 (32 texts)
+2026-02-24 21:48:17 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 16 (20 texts)
+2026-02-24 21:48:17 | SUCCESS  | src.etl.loader:process_batch:210 - Prepared 500 points for upload
+2026-02-24 21:48:18 | INFO     | src.db.client:upsert_points:125 - Upserted 500 points to 'real_estate_properties'
+2026-02-24 21:48:18 | INFO     | src.etl.loader:run_pipeline:258 - Batch 38 complete. Progress: Processed: 19000, Embedded: 19000, Uploaded: 19000, Failed: 0
+2026-02-24 21:48:18 | INFO     | src.etl.loader:run_pipeline:242 - Processing batch 39 (500 records)
+2026-02-24 21:48:19 | INFO     | src.etl.loader:process_batch:182 - Generating embeddings for 500 texts
+2026-02-24 21:48:30 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 1 (32 texts)
+2026-02-24 21:48:41 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 2 (32 texts)
+2026-02-24 21:48:50 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 3 (32 texts)
+2026-02-24 21:48:59 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 4 (32 texts)
+2026-02-24 21:49:07 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 5 (32 texts)
+2026-02-24 21:49:16 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 6 (32 texts)
+2026-02-24 21:49:26 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 7 (32 texts)
+2026-02-24 21:49:37 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 8 (32 texts)
+2026-02-24 21:49:46 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 9 (32 texts)
+2026-02-24 21:49:56 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 10 (32 texts)
+2026-02-24 21:50:05 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 11 (32 texts)
+2026-02-24 21:50:15 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 12 (32 texts)
+2026-02-24 21:50:25 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 13 (32 texts)
+2026-02-24 21:50:36 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 14 (32 texts)
+2026-02-24 21:50:44 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 15 (32 texts)
+2026-02-24 21:50:50 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 16 (20 texts)
+2026-02-24 21:50:50 | SUCCESS  | src.etl.loader:process_batch:210 - Prepared 500 points for upload
+2026-02-24 21:50:50 | INFO     | src.db.client:upsert_points:125 - Upserted 500 points to 'real_estate_properties'
+2026-02-24 21:50:50 | INFO     | src.etl.loader:run_pipeline:258 - Batch 39 complete. Progress: Processed: 19500, Embedded: 19500, Uploaded: 19500, Failed: 0
+2026-02-24 21:50:50 | INFO     | src.etl.loader:run_pipeline:242 - Processing batch 40 (500 records)
+2026-02-24 21:50:51 | INFO     | src.etl.loader:process_batch:182 - Generating embeddings for 500 texts
+2026-02-24 21:51:00 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 1 (32 texts)
+2026-02-24 21:51:08 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 2 (32 texts)
+2026-02-24 21:51:19 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 3 (32 texts)
+2026-02-24 21:51:27 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 4 (32 texts)
+2026-02-24 21:51:39 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 5 (32 texts)
+2026-02-24 21:51:47 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 6 (32 texts)
+2026-02-24 21:51:56 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 7 (32 texts)
+2026-02-24 21:52:05 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 8 (32 texts)
+2026-02-24 21:52:16 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 9 (32 texts)
+2026-02-24 21:52:25 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 10 (32 texts)
+2026-02-24 21:52:34 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 11 (32 texts)
+2026-02-24 21:52:43 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 12 (32 texts)
+2026-02-24 21:52:50 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 13 (32 texts)
+2026-02-24 21:52:58 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 14 (32 texts)
+2026-02-24 21:53:07 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 15 (32 texts)
+2026-02-24 21:53:12 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 16 (20 texts)
+2026-02-24 21:53:12 | SUCCESS  | src.etl.loader:process_batch:210 - Prepared 500 points for upload
+2026-02-24 21:53:12 | INFO     | src.db.client:upsert_points:125 - Upserted 500 points to 'real_estate_properties'
+2026-02-24 21:53:12 | INFO     | src.etl.loader:run_pipeline:258 - Batch 40 complete. Progress: Processed: 20000, Embedded: 20000, Uploaded: 20000, Failed: 0
+2026-02-24 21:53:12 | INFO     | src.etl.loader:run_pipeline:242 - Processing batch 41 (500 records)
+2026-02-24 21:53:13 | INFO     | src.etl.loader:process_batch:182 - Generating embeddings for 500 texts
+2026-02-24 21:53:22 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 1 (32 texts)
+2026-02-24 21:53:30 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 2 (32 texts)
+2026-02-24 21:53:39 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 3 (32 texts)
+2026-02-24 21:53:47 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 4 (32 texts)
+2026-02-24 21:53:57 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 5 (32 texts)
+2026-02-24 21:54:05 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 6 (32 texts)
+2026-02-24 21:54:15 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 7 (32 texts)
+2026-02-24 21:54:25 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 8 (32 texts)
+2026-02-24 21:54:34 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 9 (32 texts)
+2026-02-24 21:54:43 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 10 (32 texts)
+2026-02-24 21:54:53 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 11 (32 texts)
+2026-02-24 21:55:05 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 12 (32 texts)
+2026-02-24 21:55:14 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 13 (32 texts)
+2026-02-24 21:55:24 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 14 (32 texts)
+2026-02-24 21:55:34 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 15 (32 texts)
+2026-02-24 21:55:40 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 16 (20 texts)
+2026-02-24 21:55:40 | SUCCESS  | src.etl.loader:process_batch:210 - Prepared 500 points for upload
+2026-02-24 21:55:40 | INFO     | src.db.client:upsert_points:125 - Upserted 500 points to 'real_estate_properties'
+2026-02-24 21:55:40 | INFO     | src.etl.loader:run_pipeline:258 - Batch 41 complete. Progress: Processed: 20500, Embedded: 20500, Uploaded: 20500, Failed: 0
+2026-02-24 21:55:40 | INFO     | src.etl.loader:run_pipeline:242 - Processing batch 42 (500 records)
+2026-02-24 21:55:42 | INFO     | src.etl.loader:process_batch:182 - Generating embeddings for 500 texts
+2026-02-24 21:55:51 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 1 (32 texts)
+2026-02-24 21:55:59 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 2 (32 texts)
+2026-02-24 21:56:09 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 3 (32 texts)
+2026-02-24 21:56:18 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 4 (32 texts)
+2026-02-24 21:56:27 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 5 (32 texts)
+2026-02-24 21:56:35 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 6 (32 texts)
+2026-02-24 21:56:45 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 7 (32 texts)
+2026-02-24 21:56:54 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 8 (32 texts)
+2026-02-24 21:57:04 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 9 (32 texts)
+2026-02-24 21:57:13 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 10 (32 texts)
+2026-02-24 21:57:21 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 11 (32 texts)
+2026-02-24 21:57:31 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 12 (32 texts)
+2026-02-24 21:57:40 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 13 (32 texts)
+2026-02-24 21:57:50 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 14 (32 texts)
+2026-02-24 21:57:59 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 15 (32 texts)
+2026-02-24 21:58:04 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 16 (20 texts)
+2026-02-24 21:58:04 | SUCCESS  | src.etl.loader:process_batch:210 - Prepared 500 points for upload
+2026-02-24 21:58:04 | INFO     | src.db.client:upsert_points:125 - Upserted 500 points to 'real_estate_properties'
+2026-02-24 21:58:04 | INFO     | src.etl.loader:run_pipeline:258 - Batch 42 complete. Progress: Processed: 21000, Embedded: 21000, Uploaded: 21000, Failed: 0
+2026-02-24 21:58:04 | INFO     | src.etl.loader:run_pipeline:242 - Processing batch 43 (500 records)
+2026-02-24 21:58:05 | INFO     | src.etl.loader:process_batch:182 - Generating embeddings for 500 texts
+2026-02-24 21:58:14 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 1 (32 texts)
+2026-02-24 21:58:23 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 2 (32 texts)
+2026-02-24 21:58:32 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 3 (32 texts)
+2026-02-24 21:58:41 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 4 (32 texts)
+2026-02-24 21:58:50 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 5 (32 texts)
+2026-02-24 21:58:57 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 6 (32 texts)
+2026-02-24 21:59:06 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 7 (32 texts)
+2026-02-24 21:59:15 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 8 (32 texts)
+2026-02-24 21:59:25 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 9 (32 texts)
+2026-02-24 21:59:34 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 10 (32 texts)
+2026-02-24 21:59:43 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 11 (32 texts)
+2026-02-24 21:59:53 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 12 (32 texts)
+2026-02-24 22:00:02 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 13 (32 texts)
+2026-02-24 22:00:12 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 14 (32 texts)
+2026-02-24 22:00:21 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 15 (32 texts)
+2026-02-24 22:00:27 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 16 (20 texts)
+2026-02-24 22:00:27 | SUCCESS  | src.etl.loader:process_batch:210 - Prepared 500 points for upload
+2026-02-24 22:00:28 | INFO     | src.db.client:upsert_points:125 - Upserted 500 points to 'real_estate_properties'
+2026-02-24 22:00:28 | INFO     | src.etl.loader:run_pipeline:258 - Batch 43 complete. Progress: Processed: 21500, Embedded: 21500, Uploaded: 21500, Failed: 0
+2026-02-24 22:00:28 | INFO     | src.etl.loader:run_pipeline:242 - Processing batch 44 (500 records)
+2026-02-24 22:00:29 | INFO     | src.etl.loader:process_batch:182 - Generating embeddings for 500 texts
+2026-02-24 22:00:39 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 1 (32 texts)
+2026-02-24 22:00:47 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 2 (32 texts)
+2026-02-24 22:00:57 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 3 (32 texts)
+2026-02-24 22:01:07 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 4 (32 texts)
+2026-02-24 22:01:16 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 5 (32 texts)
+2026-02-24 22:01:25 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 6 (32 texts)
+2026-02-24 22:01:35 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 7 (32 texts)
+2026-02-24 22:01:45 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 8 (32 texts)
+2026-02-24 22:01:56 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 9 (32 texts)
+2026-02-24 22:02:07 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 10 (32 texts)
+2026-02-24 22:02:19 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 11 (32 texts)
+2026-02-24 22:02:31 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 12 (32 texts)
+2026-02-24 22:02:42 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 13 (32 texts)
+2026-02-24 22:02:52 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 14 (32 texts)
+2026-02-24 22:03:02 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 15 (32 texts)
+2026-02-24 22:03:08 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 16 (20 texts)
+2026-02-24 22:03:08 | SUCCESS  | src.etl.loader:process_batch:210 - Prepared 500 points for upload
+2026-02-24 22:03:09 | INFO     | src.db.client:upsert_points:125 - Upserted 500 points to 'real_estate_properties'
+2026-02-24 22:03:09 | INFO     | src.etl.loader:run_pipeline:258 - Batch 44 complete. Progress: Processed: 22000, Embedded: 22000, Uploaded: 22000, Failed: 0
+2026-02-24 22:03:09 | INFO     | src.etl.loader:run_pipeline:242 - Processing batch 45 (500 records)
+2026-02-24 22:03:10 | INFO     | src.etl.loader:process_batch:182 - Generating embeddings for 500 texts
+2026-02-24 22:03:20 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 1 (32 texts)
+2026-02-24 22:03:29 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 2 (32 texts)
+2026-02-24 22:03:39 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 3 (32 texts)
+2026-02-24 22:03:49 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 4 (32 texts)
+2026-02-24 22:03:59 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 5 (32 texts)
+2026-02-24 22:04:08 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 6 (32 texts)
+2026-02-24 22:04:17 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 7 (32 texts)
+2026-02-24 22:04:31 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 8 (32 texts)
+2026-02-24 22:04:41 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 9 (32 texts)
+2026-02-24 22:04:50 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 10 (32 texts)
+2026-02-24 22:05:01 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 11 (32 texts)
+2026-02-24 22:05:10 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 12 (32 texts)
+2026-02-24 22:05:20 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 13 (32 texts)
+2026-02-24 22:05:30 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 14 (32 texts)
+2026-02-24 22:05:41 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 15 (32 texts)
+2026-02-24 22:05:47 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 16 (20 texts)
+2026-02-24 22:05:47 | SUCCESS  | src.etl.loader:process_batch:210 - Prepared 500 points for upload
+2026-02-24 22:05:48 | INFO     | src.db.client:upsert_points:125 - Upserted 500 points to 'real_estate_properties'
+2026-02-24 22:05:48 | INFO     | src.etl.loader:run_pipeline:258 - Batch 45 complete. Progress: Processed: 22500, Embedded: 22500, Uploaded: 22500, Failed: 0
+2026-02-24 22:05:48 | INFO     | src.etl.loader:run_pipeline:242 - Processing batch 46 (500 records)
+2026-02-24 22:05:49 | INFO     | src.etl.loader:process_batch:182 - Generating embeddings for 500 texts
+2026-02-24 22:05:59 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 1 (32 texts)
+2026-02-24 22:06:10 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 2 (32 texts)
+2026-02-24 22:06:19 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 3 (32 texts)
+2026-02-24 22:06:29 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 4 (32 texts)
+2026-02-24 22:06:40 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 5 (32 texts)
+2026-02-24 22:06:49 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 6 (32 texts)
+2026-02-24 22:07:00 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 7 (32 texts)
+2026-02-24 22:07:11 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 8 (32 texts)
+2026-02-24 22:07:20 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 9 (32 texts)
+2026-02-24 22:07:30 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 10 (32 texts)
+2026-02-24 22:07:43 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 11 (32 texts)
+2026-02-24 22:07:57 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 12 (32 texts)
+2026-02-24 22:08:12 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 13 (32 texts)
+2026-02-24 22:08:30 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 14 (32 texts)
+2026-02-24 22:08:46 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 15 (32 texts)
+2026-02-24 22:08:58 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 16 (20 texts)
+2026-02-24 22:08:58 | SUCCESS  | src.etl.loader:process_batch:210 - Prepared 500 points for upload
+2026-02-24 22:09:00 | INFO     | src.db.client:upsert_points:125 - Upserted 500 points to 'real_estate_properties'
+2026-02-24 22:09:00 | INFO     | src.etl.loader:run_pipeline:258 - Batch 46 complete. Progress: Processed: 23000, Embedded: 23000, Uploaded: 23000, Failed: 0
+2026-02-24 22:09:00 | INFO     | src.etl.loader:run_pipeline:242 - Processing batch 47 (500 records)
+2026-02-24 22:09:01 | INFO     | src.etl.loader:process_batch:182 - Generating embeddings for 500 texts
+2026-02-24 22:09:19 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 1 (32 texts)
+2026-02-24 22:09:38 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 2 (32 texts)
+2026-02-24 22:09:59 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 3 (32 texts)
+2026-02-24 22:10:14 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 4 (32 texts)
+2026-02-24 22:10:28 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 5 (32 texts)
+2026-02-24 22:10:48 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 6 (32 texts)
+2026-02-24 22:11:06 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 7 (32 texts)
+2026-02-24 22:11:16 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 8 (32 texts)
+2026-02-24 22:11:28 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 9 (32 texts)
+2026-02-24 22:11:37 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 10 (32 texts)
+2026-02-24 22:11:46 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 11 (32 texts)
+2026-02-24 22:11:56 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 12 (32 texts)
+2026-02-24 22:12:06 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 13 (32 texts)
+2026-02-24 22:12:15 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 14 (32 texts)
+2026-02-24 22:12:25 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 15 (32 texts)
+2026-02-24 22:12:31 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 16 (20 texts)
+2026-02-24 22:12:32 | SUCCESS  | src.etl.loader:process_batch:210 - Prepared 500 points for upload
+2026-02-24 22:12:32 | INFO     | src.db.client:upsert_points:125 - Upserted 500 points to 'real_estate_properties'
+2026-02-24 22:12:32 | INFO     | src.etl.loader:run_pipeline:258 - Batch 47 complete. Progress: Processed: 23500, Embedded: 23500, Uploaded: 23500, Failed: 0
+2026-02-24 22:12:32 | INFO     | src.etl.loader:run_pipeline:242 - Processing batch 48 (500 records)
+2026-02-24 22:12:33 | INFO     | src.etl.loader:process_batch:182 - Generating embeddings for 500 texts
+2026-02-24 22:12:43 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 1 (32 texts)
+2026-02-24 22:12:56 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 2 (32 texts)
+2026-02-24 22:13:07 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 3 (32 texts)
+2026-02-24 22:13:17 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 4 (32 texts)
+2026-02-24 22:13:26 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 5 (32 texts)
+2026-02-24 22:13:35 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 6 (32 texts)
+2026-02-24 22:13:45 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 7 (32 texts)
+2026-02-24 22:13:55 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 8 (32 texts)
+2026-02-24 22:14:05 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 9 (32 texts)
+2026-02-24 22:14:15 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 10 (32 texts)
+2026-02-24 22:14:25 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 11 (32 texts)
+2026-02-24 22:14:34 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 12 (32 texts)
+2026-02-24 22:14:44 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 13 (32 texts)
+2026-02-24 22:14:53 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 14 (32 texts)
+2026-02-24 22:15:04 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 15 (32 texts)
+2026-02-24 22:15:09 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 16 (20 texts)
+2026-02-24 22:15:09 | SUCCESS  | src.etl.loader:process_batch:210 - Prepared 500 points for upload
+2026-02-24 22:15:10 | INFO     | src.db.client:upsert_points:125 - Upserted 500 points to 'real_estate_properties'
+2026-02-24 22:15:10 | INFO     | src.etl.loader:run_pipeline:258 - Batch 48 complete. Progress: Processed: 24000, Embedded: 24000, Uploaded: 24000, Failed: 0
+2026-02-24 22:15:10 | INFO     | src.etl.loader:run_pipeline:242 - Processing batch 49 (500 records)
+2026-02-24 22:15:11 | INFO     | src.etl.loader:process_batch:182 - Generating embeddings for 500 texts
+2026-02-24 22:15:21 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 1 (32 texts)
+2026-02-24 22:15:30 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 2 (32 texts)
+2026-02-24 22:15:39 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 3 (32 texts)
+2026-02-24 22:15:49 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 4 (32 texts)
+2026-02-24 22:15:59 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 5 (32 texts)
+2026-02-24 22:16:08 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 6 (32 texts)
+2026-02-24 22:16:17 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 7 (32 texts)
+2026-02-24 22:16:27 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 8 (32 texts)
+2026-02-24 22:16:36 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 9 (32 texts)
+2026-02-24 22:16:46 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 10 (32 texts)
+2026-02-24 22:16:58 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 11 (32 texts)
+2026-02-24 22:17:08 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 12 (32 texts)
+2026-02-24 22:17:16 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 13 (32 texts)
+2026-02-24 22:17:26 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 14 (32 texts)
+2026-02-24 22:17:34 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 15 (32 texts)
+2026-02-24 22:17:40 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 16 (20 texts)
+2026-02-24 22:17:40 | SUCCESS  | src.etl.loader:process_batch:210 - Prepared 500 points for upload
+2026-02-24 22:17:41 | INFO     | src.db.client:upsert_points:125 - Upserted 500 points to 'real_estate_properties'
+2026-02-24 22:17:41 | INFO     | src.etl.loader:run_pipeline:258 - Batch 49 complete. Progress: Processed: 24500, Embedded: 24500, Uploaded: 24500, Failed: 0
+2026-02-24 22:17:41 | INFO     | src.etl.loader:run_pipeline:242 - Processing batch 50 (500 records)
+2026-02-24 22:17:42 | INFO     | src.etl.loader:process_batch:182 - Generating embeddings for 500 texts
+2026-02-24 22:17:51 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 1 (32 texts)
+2026-02-24 22:18:00 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 2 (32 texts)
+2026-02-24 22:18:07 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 3 (32 texts)
+2026-02-24 22:18:16 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 4 (32 texts)
+2026-02-24 22:18:26 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 5 (32 texts)
+2026-02-24 22:18:40 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 6 (32 texts)
+2026-02-24 22:18:50 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 7 (32 texts)
+2026-02-24 22:19:02 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 8 (32 texts)
+2026-02-24 22:19:10 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 9 (32 texts)
+2026-02-24 22:19:23 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 10 (32 texts)
+2026-02-24 22:19:32 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 11 (32 texts)
+2026-02-24 22:19:42 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 12 (32 texts)
+2026-02-24 22:19:51 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 13 (32 texts)
+2026-02-24 22:20:02 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 14 (32 texts)
+2026-02-24 22:20:12 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 15 (32 texts)
+2026-02-24 22:20:17 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 16 (20 texts)
+2026-02-24 22:20:17 | SUCCESS  | src.etl.loader:process_batch:210 - Prepared 500 points for upload
+2026-02-24 22:20:18 | INFO     | src.db.client:upsert_points:125 - Upserted 500 points to 'real_estate_properties'
+2026-02-24 22:20:18 | INFO     | src.etl.loader:run_pipeline:258 - Batch 50 complete. Progress: Processed: 25000, Embedded: 25000, Uploaded: 25000, Failed: 0
+2026-02-24 22:20:18 | INFO     | src.etl.loader:run_pipeline:242 - Processing batch 51 (500 records)
+2026-02-24 22:20:19 | INFO     | src.etl.loader:process_batch:182 - Generating embeddings for 500 texts
+2026-02-24 22:20:29 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 1 (32 texts)
+2026-02-24 22:20:40 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 2 (32 texts)
+2026-02-24 22:20:50 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 3 (32 texts)
+2026-02-24 22:20:59 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 4 (32 texts)
+2026-02-24 22:21:12 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 5 (32 texts)
+2026-02-24 22:21:24 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 6 (32 texts)
+2026-02-24 22:21:33 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 7 (32 texts)
+2026-02-24 22:51:41 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 8 (32 texts)
+2026-02-24 22:52:09 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 9 (32 texts)
+2026-02-24 22:53:04 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 10 (32 texts)
+2026-02-24 22:53:51 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 11 (32 texts)
+2026-02-24 22:54:55 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 12 (32 texts)
+2026-02-24 22:55:36 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 13 (32 texts)
+2026-02-24 22:56:21 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 14 (32 texts)
+2026-02-24 22:57:08 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 15 (32 texts)
+2026-02-24 22:57:37 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 16 (20 texts)
+2026-02-24 22:57:37 | SUCCESS  | src.etl.loader:process_batch:210 - Prepared 500 points for upload
+2026-02-24 22:57:42 | INFO     | src.db.client:upsert_points:125 - Upserted 500 points to 'real_estate_properties'
+2026-02-24 22:57:42 | INFO     | src.etl.loader:run_pipeline:258 - Batch 51 complete. Progress: Processed: 25500, Embedded: 25500, Uploaded: 25500, Failed: 0
+2026-02-24 22:57:42 | INFO     | src.etl.loader:run_pipeline:242 - Processing batch 52 (500 records)
+2026-02-24 22:57:48 | INFO     | src.etl.loader:process_batch:182 - Generating embeddings for 500 texts
+2026-02-24 22:58:35 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 1 (32 texts)
+2026-02-24 22:59:30 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 2 (32 texts)
+2026-02-24 23:00:06 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 3 (32 texts)
+2026-02-24 23:00:24 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 4 (32 texts)
+2026-02-24 23:00:34 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 5 (32 texts)
+2026-02-24 23:00:44 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 6 (32 texts)
+2026-02-24 23:00:52 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 7 (32 texts)
+2026-02-24 23:00:58 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 8 (32 texts)
+2026-02-24 23:01:07 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 9 (32 texts)
+2026-02-24 23:01:16 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 10 (32 texts)
+2026-02-24 23:01:24 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 11 (32 texts)
+2026-02-24 23:01:35 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 12 (32 texts)
+2026-02-24 23:01:44 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 13 (32 texts)
+2026-02-24 23:01:55 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 14 (32 texts)
+2026-02-24 23:02:04 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 15 (32 texts)
+2026-02-24 23:02:08 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 16 (20 texts)
+2026-02-24 23:02:08 | SUCCESS  | src.etl.loader:process_batch:210 - Prepared 500 points for upload
+2026-02-24 23:02:09 | INFO     | src.db.client:upsert_points:125 - Upserted 500 points to 'real_estate_properties'
+2026-02-24 23:02:09 | INFO     | src.etl.loader:run_pipeline:258 - Batch 52 complete. Progress: Processed: 26000, Embedded: 26000, Uploaded: 26000, Failed: 0
+2026-02-24 23:02:09 | INFO     | src.etl.loader:run_pipeline:242 - Processing batch 53 (500 records)
+2026-02-24 23:02:09 | INFO     | src.etl.loader:process_batch:182 - Generating embeddings for 500 texts
+2026-02-24 23:02:17 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 1 (32 texts)
+2026-02-24 23:02:26 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 2 (32 texts)
+2026-02-24 23:02:36 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 3 (32 texts)
+2026-02-24 23:02:45 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 4 (32 texts)
+2026-02-24 23:02:54 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 5 (32 texts)
+2026-02-24 23:03:03 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 6 (32 texts)
+2026-02-24 23:03:13 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 7 (32 texts)
+2026-02-24 23:03:26 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 8 (32 texts)
+2026-02-24 23:03:36 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 9 (32 texts)
+2026-02-24 23:03:45 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 10 (32 texts)
+2026-02-24 23:03:54 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 11 (32 texts)
+2026-02-24 23:04:05 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 12 (32 texts)
+2026-02-24 23:04:15 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 13 (32 texts)
+2026-02-24 23:04:25 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 14 (32 texts)
+2026-02-24 23:04:34 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 15 (32 texts)
+2026-02-24 23:04:41 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 16 (20 texts)
+2026-02-24 23:04:41 | SUCCESS  | src.etl.loader:process_batch:210 - Prepared 500 points for upload
+2026-02-24 23:04:42 | INFO     | src.db.client:upsert_points:125 - Upserted 500 points to 'real_estate_properties'
+2026-02-24 23:04:42 | INFO     | src.etl.loader:run_pipeline:258 - Batch 53 complete. Progress: Processed: 26500, Embedded: 26500, Uploaded: 26500, Failed: 0
+2026-02-24 23:04:42 | INFO     | src.etl.loader:run_pipeline:242 - Processing batch 54 (500 records)
+2026-02-24 23:04:43 | INFO     | src.etl.loader:process_batch:182 - Generating embeddings for 500 texts
+2026-02-24 23:04:53 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 1 (32 texts)
+2026-02-24 23:05:04 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 2 (32 texts)
+2026-02-24 23:05:14 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 3 (32 texts)
+2026-02-24 23:05:24 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 4 (32 texts)
+2026-02-24 23:05:36 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 5 (32 texts)
+2026-02-24 23:05:49 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 6 (32 texts)
+2026-02-24 23:05:59 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 7 (32 texts)
+2026-02-24 23:06:09 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 8 (32 texts)
+2026-02-24 23:06:20 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 9 (32 texts)
+2026-02-24 23:06:31 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 10 (32 texts)
+2026-02-24 23:06:46 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 11 (32 texts)
+2026-02-24 23:06:57 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 12 (32 texts)
+2026-02-24 23:07:08 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 13 (32 texts)
+2026-02-24 23:07:19 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 14 (32 texts)
+2026-02-24 23:07:29 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 15 (32 texts)
+2026-02-24 23:07:35 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 16 (20 texts)
+2026-02-24 23:07:35 | SUCCESS  | src.etl.loader:process_batch:210 - Prepared 500 points for upload
+2026-02-24 23:07:36 | INFO     | src.db.client:upsert_points:125 - Upserted 500 points to 'real_estate_properties'
+2026-02-24 23:07:36 | INFO     | src.etl.loader:run_pipeline:258 - Batch 54 complete. Progress: Processed: 27000, Embedded: 27000, Uploaded: 27000, Failed: 0
+2026-02-24 23:07:36 | INFO     | src.etl.loader:run_pipeline:242 - Processing batch 55 (500 records)
+2026-02-24 23:07:37 | INFO     | src.etl.loader:process_batch:182 - Generating embeddings for 500 texts
+2026-02-24 23:07:47 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 1 (32 texts)
+2026-02-24 23:07:57 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 2 (32 texts)
+2026-02-24 23:08:07 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 3 (32 texts)
+2026-02-24 23:08:17 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 4 (32 texts)
+2026-02-24 23:08:27 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 5 (32 texts)
+2026-02-24 23:08:36 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 6 (32 texts)
+2026-02-24 23:08:47 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 7 (32 texts)
+2026-02-24 23:08:56 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 8 (32 texts)
+2026-02-24 23:09:06 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 9 (32 texts)
+2026-02-24 23:09:17 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 10 (32 texts)
+2026-02-24 23:09:27 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 11 (32 texts)
+2026-02-24 23:09:37 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 12 (32 texts)
+2026-02-24 23:09:50 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 13 (32 texts)
+2026-02-24 23:10:00 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 14 (32 texts)
+2026-02-24 23:10:09 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 15 (32 texts)
+2026-02-24 23:10:16 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 16 (20 texts)
+2026-02-24 23:10:16 | SUCCESS  | src.etl.loader:process_batch:210 - Prepared 500 points for upload
+2026-02-24 23:10:17 | INFO     | src.db.client:upsert_points:125 - Upserted 500 points to 'real_estate_properties'
+2026-02-24 23:10:17 | INFO     | src.etl.loader:run_pipeline:258 - Batch 55 complete. Progress: Processed: 27500, Embedded: 27500, Uploaded: 27500, Failed: 0
+2026-02-24 23:10:17 | INFO     | src.etl.loader:run_pipeline:242 - Processing batch 56 (500 records)
+2026-02-24 23:10:18 | INFO     | src.etl.loader:process_batch:182 - Generating embeddings for 500 texts
+2026-02-24 23:10:28 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 1 (32 texts)
+2026-02-24 23:10:38 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 2 (32 texts)
+2026-02-24 23:10:49 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 3 (32 texts)
+2026-02-24 23:11:00 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 4 (32 texts)
+2026-02-24 23:11:10 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 5 (32 texts)
+2026-02-24 23:11:20 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 6 (32 texts)
+2026-02-24 23:11:28 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 7 (32 texts)
+2026-02-24 23:11:42 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 8 (32 texts)
+2026-02-24 23:11:52 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 9 (32 texts)
+2026-02-24 23:12:05 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 10 (32 texts)
+2026-02-24 23:12:18 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 11 (32 texts)
+2026-02-24 23:12:32 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 12 (32 texts)
+2026-02-24 23:12:43 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 13 (32 texts)
+2026-02-24 23:12:56 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 14 (32 texts)
+2026-02-24 23:13:09 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 15 (32 texts)
+2026-02-24 23:13:16 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 16 (20 texts)
+2026-02-24 23:13:16 | SUCCESS  | src.etl.loader:process_batch:210 - Prepared 500 points for upload
+2026-02-24 23:13:16 | INFO     | src.db.client:upsert_points:125 - Upserted 500 points to 'real_estate_properties'
+2026-02-24 23:13:16 | INFO     | src.etl.loader:run_pipeline:258 - Batch 56 complete. Progress: Processed: 28000, Embedded: 28000, Uploaded: 28000, Failed: 0
+2026-02-24 23:13:16 | INFO     | src.etl.loader:run_pipeline:242 - Processing batch 57 (500 records)
+2026-02-24 23:13:17 | INFO     | src.etl.loader:process_batch:182 - Generating embeddings for 500 texts
+2026-02-24 23:13:27 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 1 (32 texts)
+2026-02-24 23:13:36 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 2 (32 texts)
+2026-02-24 23:13:45 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 3 (32 texts)
+2026-02-24 23:13:55 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 4 (32 texts)
+2026-02-24 23:14:04 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 5 (32 texts)
+2026-02-24 23:14:14 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 6 (32 texts)
+2026-02-24 23:14:24 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 7 (32 texts)
+2026-02-24 23:14:33 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 8 (32 texts)
+2026-02-24 23:14:43 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 9 (32 texts)
+2026-02-24 23:14:54 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 10 (32 texts)
+2026-02-24 23:15:03 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 11 (32 texts)
+2026-02-24 23:15:13 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 12 (32 texts)
+2026-02-24 23:15:23 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 13 (32 texts)
+2026-02-24 23:15:36 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 14 (32 texts)
+2026-02-24 23:15:46 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 15 (32 texts)
+2026-02-24 23:15:52 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 16 (20 texts)
+2026-02-24 23:15:52 | SUCCESS  | src.etl.loader:process_batch:210 - Prepared 500 points for upload
+2026-02-24 23:15:52 | INFO     | src.db.client:upsert_points:125 - Upserted 500 points to 'real_estate_properties'
+2026-02-24 23:15:52 | INFO     | src.etl.loader:run_pipeline:258 - Batch 57 complete. Progress: Processed: 28500, Embedded: 28500, Uploaded: 28500, Failed: 0
+2026-02-24 23:15:52 | INFO     | src.etl.loader:run_pipeline:242 - Processing batch 58 (500 records)
+2026-02-24 23:15:54 | INFO     | src.etl.loader:process_batch:182 - Generating embeddings for 500 texts
+2026-02-24 23:16:04 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 1 (32 texts)
+2026-02-24 23:16:15 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 2 (32 texts)
+2026-02-24 23:16:25 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 3 (32 texts)
+2026-02-24 23:16:36 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 4 (32 texts)
+2026-02-24 23:16:47 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 5 (32 texts)
+2026-02-24 23:16:58 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 6 (32 texts)
+2026-02-24 23:17:08 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 7 (32 texts)
+2026-02-24 23:30:31 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 8 (32 texts)
+2026-02-24 23:31:07 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 9 (32 texts)
+2026-02-24 23:48:12 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 10 (32 texts)
+2026-02-24 23:48:47 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 11 (32 texts)
+2026-02-24 23:49:42 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 12 (32 texts)
+2026-02-24 23:50:29 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 13 (32 texts)
+2026-02-24 23:51:24 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 14 (32 texts)
+2026-02-24 23:52:09 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 15 (32 texts)
+2026-02-24 23:52:36 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 16 (20 texts)
+2026-02-24 23:52:36 | SUCCESS  | src.etl.loader:process_batch:210 - Prepared 500 points for upload
+2026-02-24 23:52:40 | INFO     | src.db.client:upsert_points:125 - Upserted 500 points to 'real_estate_properties'
+2026-02-24 23:52:40 | INFO     | src.etl.loader:run_pipeline:258 - Batch 58 complete. Progress: Processed: 29000, Embedded: 29000, Uploaded: 29000, Failed: 0
+2026-02-24 23:52:40 | INFO     | src.etl.loader:run_pipeline:242 - Processing batch 59 (500 records)
+2026-02-24 23:52:46 | INFO     | src.etl.loader:process_batch:182 - Generating embeddings for 500 texts
+2026-02-24 23:53:35 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 1 (32 texts)
+2026-02-24 23:54:19 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 2 (32 texts)
+2026-02-24 23:55:05 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 3 (32 texts)
+2026-02-24 23:55:56 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 4 (32 texts)
+2026-02-24 23:56:40 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 5 (32 texts)
+2026-02-24 23:57:22 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 6 (32 texts)
+2026-02-24 23:58:07 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 7 (32 texts)
+2026-02-24 23:58:50 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 8 (32 texts)
+2026-02-24 23:59:31 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 9 (32 texts)
+2026-02-25 00:00:11 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 10 (32 texts)
+2026-02-25 00:00:53 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 11 (32 texts)
+2026-02-25 00:01:30 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 12 (32 texts)
+2026-02-25 00:02:10 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 13 (32 texts)
+2026-02-25 00:02:49 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 14 (32 texts)
+2026-02-25 00:03:32 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 15 (32 texts)
+2026-02-25 00:03:59 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 16 (20 texts)
+2026-02-25 00:03:59 | SUCCESS  | src.etl.loader:process_batch:210 - Prepared 500 points for upload
+2026-02-25 00:04:02 | INFO     | src.db.client:upsert_points:125 - Upserted 500 points to 'real_estate_properties'
+2026-02-25 00:04:02 | INFO     | src.etl.loader:run_pipeline:258 - Batch 59 complete. Progress: Processed: 29500, Embedded: 29500, Uploaded: 29500, Failed: 0
+2026-02-25 00:04:02 | INFO     | src.etl.loader:run_pipeline:242 - Processing batch 60 (500 records)
+2026-02-25 00:04:08 | INFO     | src.etl.loader:process_batch:182 - Generating embeddings for 500 texts
+2026-02-25 00:04:49 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 1 (32 texts)
+2026-02-25 00:05:24 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 2 (32 texts)
+2026-02-25 00:06:00 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 3 (32 texts)
+2026-02-25 00:06:40 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 4 (32 texts)
+2026-02-25 00:07:34 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 5 (32 texts)
+2026-02-25 00:08:15 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 6 (32 texts)
+2026-02-25 00:09:13 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 7 (32 texts)
+2026-02-25 00:09:54 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 8 (32 texts)
+2026-02-25 00:10:37 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 9 (32 texts)
+2026-02-25 00:11:17 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 10 (32 texts)
+2026-02-25 00:11:59 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 11 (32 texts)
+2026-02-25 00:12:43 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 12 (32 texts)
+2026-02-25 00:13:22 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 13 (32 texts)
+2026-02-25 00:14:02 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 14 (32 texts)
+2026-02-25 00:14:38 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 15 (32 texts)
+2026-02-25 00:14:59 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 16 (20 texts)
+2026-02-25 00:14:59 | SUCCESS  | src.etl.loader:process_batch:210 - Prepared 500 points for upload
+2026-02-25 00:15:02 | INFO     | src.db.client:upsert_points:125 - Upserted 500 points to 'real_estate_properties'
+2026-02-25 00:15:02 | INFO     | src.etl.loader:run_pipeline:258 - Batch 60 complete. Progress: Processed: 30000, Embedded: 30000, Uploaded: 30000, Failed: 0
+2026-02-25 00:15:03 | INFO     | src.etl.loader:run_pipeline:242 - Processing batch 61 (500 records)
+2026-02-25 00:15:09 | INFO     | src.etl.loader:process_batch:182 - Generating embeddings for 500 texts
+2026-02-25 00:15:50 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 1 (32 texts)
+2026-02-25 00:16:25 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 2 (32 texts)
+2026-02-25 00:17:03 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 3 (32 texts)
+2026-02-25 00:17:41 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 4 (32 texts)
+2026-02-25 00:18:17 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 5 (32 texts)
+2026-02-25 00:18:58 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 6 (32 texts)
+2026-02-25 00:19:34 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 7 (32 texts)
+2026-02-25 00:20:20 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 8 (32 texts)
+2026-02-25 00:21:01 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 9 (32 texts)
+2026-02-25 00:21:44 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 10 (32 texts)
+2026-02-25 00:22:25 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 11 (32 texts)
+2026-02-25 00:23:09 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 12 (32 texts)
+2026-02-25 00:23:48 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 13 (32 texts)
+2026-02-25 00:24:31 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 14 (32 texts)
+2026-02-25 00:25:16 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 15 (32 texts)
+2026-02-25 00:25:50 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 16 (20 texts)
+2026-02-25 00:25:51 | SUCCESS  | src.etl.loader:process_batch:210 - Prepared 500 points for upload
+2026-02-25 00:25:54 | INFO     | src.db.client:upsert_points:125 - Upserted 500 points to 'real_estate_properties'
+2026-02-25 00:25:54 | INFO     | src.etl.loader:run_pipeline:258 - Batch 61 complete. Progress: Processed: 30500, Embedded: 30500, Uploaded: 30500, Failed: 0
+2026-02-25 00:25:54 | INFO     | src.etl.loader:run_pipeline:242 - Processing batch 62 (500 records)
+2026-02-25 00:26:00 | INFO     | src.etl.loader:process_batch:182 - Generating embeddings for 500 texts
+2026-02-25 00:26:41 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 1 (32 texts)
+2026-02-25 00:27:25 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 2 (32 texts)
+2026-02-25 00:28:07 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 3 (32 texts)
+2026-02-25 00:28:48 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 4 (32 texts)
+2026-02-25 00:58:56 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 5 (32 texts)
+2026-02-25 00:59:41 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 6 (32 texts)
+2026-02-25 01:00:28 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 7 (32 texts)
+2026-02-25 01:01:10 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 8 (32 texts)
+2026-02-25 01:01:57 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 9 (32 texts)
+2026-02-25 01:02:39 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 10 (32 texts)
+2026-02-25 01:03:30 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 11 (32 texts)
+2026-02-25 01:04:16 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 12 (32 texts)
+2026-02-25 01:05:03 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 13 (32 texts)
+2026-02-25 01:05:45 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 14 (32 texts)
+2026-02-25 01:06:26 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 15 (32 texts)
+2026-02-25 01:06:52 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 16 (20 texts)
+2026-02-25 01:06:52 | SUCCESS  | src.etl.loader:process_batch:210 - Prepared 500 points for upload
+2026-02-25 01:06:56 | INFO     | src.db.client:upsert_points:125 - Upserted 500 points to 'real_estate_properties'
+2026-02-25 01:06:56 | INFO     | src.etl.loader:run_pipeline:258 - Batch 62 complete. Progress: Processed: 31000, Embedded: 31000, Uploaded: 31000, Failed: 0
+2026-02-25 01:06:56 | INFO     | src.etl.loader:run_pipeline:242 - Processing batch 63 (500 records)
+2026-02-25 01:07:00 | INFO     | src.etl.loader:process_batch:182 - Generating embeddings for 500 texts
+2026-02-25 01:07:48 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 1 (32 texts)
+2026-02-25 01:08:29 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 2 (32 texts)
+2026-02-25 01:09:09 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 3 (32 texts)
+2026-02-25 01:09:51 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 4 (32 texts)
+2026-02-25 01:10:29 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 5 (32 texts)
+2026-02-25 01:11:07 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 6 (32 texts)
+2026-02-25 01:11:26 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 7 (32 texts)
+2026-02-25 01:11:35 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 8 (32 texts)
+2026-02-25 01:27:11 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 9 (32 texts)
+2026-02-25 01:59:10 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 10 (32 texts)
+2026-02-25 02:02:05 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 11 (32 texts)
+2026-02-25 02:02:28 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 12 (32 texts)
+2026-02-25 03:12:34 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 13 (32 texts)
+2026-02-25 03:18:31 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 14 (32 texts)
+2026-02-25 05:06:32 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 15 (32 texts)
+2026-02-25 05:52:11 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 16 (20 texts)
+2026-02-25 05:52:11 | SUCCESS  | src.etl.loader:process_batch:210 - Prepared 500 points for upload
+2026-02-25 05:52:12 | INFO     | src.db.client:upsert_points:125 - Upserted 500 points to 'real_estate_properties'
+2026-02-25 05:52:12 | INFO     | src.etl.loader:run_pipeline:258 - Batch 63 complete. Progress: Processed: 31500, Embedded: 31500, Uploaded: 31500, Failed: 0
+2026-02-25 05:52:12 | INFO     | src.etl.loader:run_pipeline:242 - Processing batch 64 (500 records)
+2026-02-25 05:52:13 | INFO     | src.etl.loader:process_batch:182 - Generating embeddings for 500 texts
+2026-02-25 06:01:06 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 1 (32 texts)
+2026-02-25 07:01:53 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 2 (32 texts)
+2026-02-25 07:02:42 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 3 (32 texts)
+2026-02-25 07:24:50 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 4 (32 texts)
+2026-02-25 07:25:08 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 5 (32 texts)
+2026-02-25 07:25:26 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 6 (32 texts)
+2026-02-25 07:25:40 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 7 (32 texts)
+2026-02-25 07:25:52 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 8 (32 texts)
+2026-02-25 07:26:02 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 9 (32 texts)
+2026-02-25 07:26:15 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 10 (32 texts)
+2026-02-25 07:26:26 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 11 (32 texts)
+2026-02-25 07:26:35 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 12 (32 texts)
+2026-02-25 07:26:44 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 13 (32 texts)
+2026-02-25 07:26:58 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 14 (32 texts)
+2026-02-25 07:27:07 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 15 (32 texts)
+2026-02-25 07:27:13 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 16 (20 texts)
+2026-02-25 07:27:13 | SUCCESS  | src.etl.loader:process_batch:210 - Prepared 500 points for upload
+2026-02-25 07:27:13 | INFO     | src.db.client:upsert_points:125 - Upserted 500 points to 'real_estate_properties'
+2026-02-25 07:27:13 | INFO     | src.etl.loader:run_pipeline:258 - Batch 64 complete. Progress: Processed: 32000, Embedded: 32000, Uploaded: 32000, Failed: 0
+2026-02-25 07:27:13 | INFO     | src.etl.loader:run_pipeline:242 - Processing batch 65 (500 records)
+2026-02-25 07:27:14 | INFO     | src.etl.loader:process_batch:182 - Generating embeddings for 500 texts
+2026-02-25 07:27:24 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 1 (32 texts)
+2026-02-25 07:27:33 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 2 (32 texts)
+2026-02-25 07:27:42 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 3 (32 texts)
+2026-02-25 07:27:53 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 4 (32 texts)
+2026-02-25 07:28:03 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 5 (32 texts)
+2026-02-25 07:28:12 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 6 (32 texts)
+2026-02-25 07:28:19 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 7 (32 texts)
+2026-02-25 07:28:29 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 8 (32 texts)
+2026-02-25 07:28:40 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 9 (32 texts)
+2026-02-25 07:28:53 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 10 (32 texts)
+2026-02-25 07:29:03 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 11 (32 texts)
+2026-02-25 07:29:11 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 12 (32 texts)
+2026-02-25 07:29:20 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 13 (32 texts)
+2026-02-25 07:29:29 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 14 (32 texts)
+2026-02-25 07:29:38 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 15 (32 texts)
+2026-02-25 07:29:44 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 16 (20 texts)
+2026-02-25 07:29:44 | SUCCESS  | src.etl.loader:process_batch:210 - Prepared 500 points for upload
+2026-02-25 07:29:45 | INFO     | src.db.client:upsert_points:125 - Upserted 500 points to 'real_estate_properties'
+2026-02-25 07:29:45 | INFO     | src.etl.loader:run_pipeline:258 - Batch 65 complete. Progress: Processed: 32500, Embedded: 32500, Uploaded: 32500, Failed: 0
+2026-02-25 07:29:45 | INFO     | src.etl.loader:run_pipeline:242 - Processing batch 66 (500 records)
+2026-02-25 07:29:45 | INFO     | src.etl.loader:process_batch:182 - Generating embeddings for 500 texts
+2026-02-25 07:29:56 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 1 (32 texts)
+2026-02-25 07:30:05 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 2 (32 texts)
+2026-02-25 07:30:16 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 3 (32 texts)
+2026-02-25 07:30:26 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 4 (32 texts)
+2026-02-25 07:30:34 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 5 (32 texts)
+2026-02-25 07:30:43 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 6 (32 texts)
+2026-02-25 07:30:52 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 7 (32 texts)
+2026-02-25 07:31:02 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 8 (32 texts)
+2026-02-25 07:31:12 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 9 (32 texts)
+2026-02-25 07:31:22 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 10 (32 texts)
+2026-02-25 07:31:33 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 11 (32 texts)
+2026-02-25 07:31:43 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 12 (32 texts)
+2026-02-25 07:31:53 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 13 (32 texts)
+2026-02-25 07:32:07 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 14 (32 texts)
+2026-02-25 07:32:18 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 15 (32 texts)
+2026-02-25 07:32:24 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 16 (20 texts)
+2026-02-25 07:32:24 | SUCCESS  | src.etl.loader:process_batch:210 - Prepared 500 points for upload
+2026-02-25 07:32:25 | INFO     | src.db.client:upsert_points:125 - Upserted 500 points to 'real_estate_properties'
+2026-02-25 07:32:25 | INFO     | src.etl.loader:run_pipeline:258 - Batch 66 complete. Progress: Processed: 33000, Embedded: 33000, Uploaded: 33000, Failed: 0
+2026-02-25 07:32:25 | INFO     | src.etl.loader:run_pipeline:242 - Processing batch 67 (500 records)
+2026-02-25 07:32:25 | INFO     | src.etl.loader:process_batch:182 - Generating embeddings for 500 texts
+2026-02-25 07:32:40 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 1 (32 texts)
+2026-02-25 07:32:50 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 2 (32 texts)
+2026-02-25 07:33:01 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 3 (32 texts)
+2026-02-25 07:33:12 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 4 (32 texts)
+2026-02-25 07:33:23 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 5 (32 texts)
+2026-02-25 07:33:34 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 6 (32 texts)
+2026-02-25 07:33:43 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 7 (32 texts)
+2026-02-25 07:33:57 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 8 (32 texts)
+2026-02-25 07:34:08 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 9 (32 texts)
+2026-02-25 07:34:17 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 10 (32 texts)
+2026-02-25 07:34:29 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 11 (32 texts)
+2026-02-25 07:34:39 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 12 (32 texts)
+2026-02-25 07:34:49 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 13 (32 texts)
+2026-02-25 07:34:59 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 14 (32 texts)
+2026-02-25 07:35:09 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 15 (32 texts)
+2026-02-25 07:35:15 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 16 (20 texts)
+2026-02-25 07:35:15 | SUCCESS  | src.etl.loader:process_batch:210 - Prepared 500 points for upload
+2026-02-25 07:35:16 | INFO     | src.db.client:upsert_points:125 - Upserted 500 points to 'real_estate_properties'
+2026-02-25 07:35:16 | INFO     | src.etl.loader:run_pipeline:258 - Batch 67 complete. Progress: Processed: 33500, Embedded: 33500, Uploaded: 33500, Failed: 0
+2026-02-25 07:35:16 | INFO     | src.etl.loader:run_pipeline:242 - Processing batch 68 (500 records)
+2026-02-25 07:35:17 | INFO     | src.etl.loader:process_batch:182 - Generating embeddings for 500 texts
+2026-02-25 07:35:29 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 1 (32 texts)
+2026-02-25 07:35:41 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 2 (32 texts)
+2026-02-25 07:35:53 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 3 (32 texts)
+2026-02-25 07:36:04 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 4 (32 texts)
+2026-02-25 07:36:14 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 5 (32 texts)
+2026-02-25 07:36:24 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 6 (32 texts)
+2026-02-25 07:36:35 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 7 (32 texts)
+2026-02-25 07:36:46 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 8 (32 texts)
+2026-02-25 07:36:58 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 9 (32 texts)
+2026-02-25 07:37:10 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 10 (32 texts)
+2026-02-25 07:37:20 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 11 (32 texts)
+2026-02-25 07:37:30 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 12 (32 texts)
+2026-02-25 07:37:40 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 13 (32 texts)
+2026-02-25 07:37:51 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 14 (32 texts)
+2026-02-25 07:38:05 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 15 (32 texts)
+2026-02-25 07:38:15 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 16 (20 texts)
+2026-02-25 07:38:16 | SUCCESS  | src.etl.loader:process_batch:210 - Prepared 500 points for upload
+2026-02-25 07:38:16 | INFO     | src.db.client:upsert_points:125 - Upserted 500 points to 'real_estate_properties'
+2026-02-25 07:38:16 | INFO     | src.etl.loader:run_pipeline:258 - Batch 68 complete. Progress: Processed: 34000, Embedded: 34000, Uploaded: 34000, Failed: 0
+2026-02-25 07:38:16 | INFO     | src.etl.loader:run_pipeline:242 - Processing batch 69 (500 records)
+2026-02-25 07:38:17 | INFO     | src.etl.loader:process_batch:182 - Generating embeddings for 500 texts
+2026-02-25 07:38:28 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 1 (32 texts)
+2026-02-25 07:38:42 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 2 (32 texts)
+2026-02-25 07:38:50 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 3 (32 texts)
+2026-02-25 07:39:02 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 4 (32 texts)
+2026-02-25 07:39:11 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 5 (32 texts)
+2026-02-25 07:39:23 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 6 (32 texts)
+2026-02-25 07:39:32 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 7 (32 texts)
+2026-02-25 07:39:43 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 8 (32 texts)
+2026-02-25 07:39:58 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 9 (32 texts)
+2026-02-25 07:40:09 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 10 (32 texts)
+2026-02-25 07:40:25 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 11 (32 texts)
+2026-02-25 07:40:40 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 12 (32 texts)
+2026-02-25 07:40:53 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 13 (32 texts)
+2026-02-25 07:41:05 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 14 (32 texts)
+2026-02-25 07:41:16 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 15 (32 texts)
+2026-02-25 07:41:22 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 16 (20 texts)
+2026-02-25 07:41:22 | SUCCESS  | src.etl.loader:process_batch:210 - Prepared 500 points for upload
+2026-02-25 07:41:23 | INFO     | src.db.client:upsert_points:125 - Upserted 500 points to 'real_estate_properties'
+2026-02-25 07:41:23 | INFO     | src.etl.loader:run_pipeline:258 - Batch 69 complete. Progress: Processed: 34500, Embedded: 34500, Uploaded: 34500, Failed: 0
+2026-02-25 07:41:23 | INFO     | src.etl.loader:run_pipeline:242 - Processing batch 70 (500 records)
+2026-02-25 07:41:24 | INFO     | src.etl.loader:process_batch:182 - Generating embeddings for 500 texts
+2026-02-25 07:41:35 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 1 (32 texts)
+2026-02-25 07:41:47 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 2 (32 texts)
+2026-02-25 07:41:58 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 3 (32 texts)
+2026-02-25 07:42:09 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 4 (32 texts)
+2026-02-25 07:42:21 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 5 (32 texts)
+2026-02-25 07:42:33 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 6 (32 texts)
+2026-02-25 07:42:46 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 7 (32 texts)
+2026-02-25 07:42:57 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 8 (32 texts)
+2026-02-25 07:43:08 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 9 (32 texts)
+2026-02-25 07:43:19 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 10 (32 texts)
+2026-02-25 07:43:30 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 11 (32 texts)
+2026-02-25 07:43:42 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 12 (32 texts)
+2026-02-25 07:43:52 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 13 (32 texts)
+2026-02-25 07:44:02 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 14 (32 texts)
+2026-02-25 07:44:13 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 15 (32 texts)
+2026-02-25 07:44:21 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 16 (20 texts)
+2026-02-25 07:44:21 | SUCCESS  | src.etl.loader:process_batch:210 - Prepared 500 points for upload
+2026-02-25 07:44:22 | INFO     | src.db.client:upsert_points:125 - Upserted 500 points to 'real_estate_properties'
+2026-02-25 07:44:22 | INFO     | src.etl.loader:run_pipeline:258 - Batch 70 complete. Progress: Processed: 35000, Embedded: 35000, Uploaded: 35000, Failed: 0
+2026-02-25 07:44:22 | INFO     | src.etl.loader:run_pipeline:242 - Processing batch 71 (500 records)
+2026-02-25 07:44:23 | INFO     | src.etl.loader:process_batch:182 - Generating embeddings for 500 texts
+2026-02-25 07:44:34 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 1 (32 texts)
+2026-02-25 07:44:45 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 2 (32 texts)
+2026-02-25 07:44:57 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 3 (32 texts)
+2026-02-25 07:45:07 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 4 (32 texts)
+2026-02-25 07:45:18 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 5 (32 texts)
+2026-02-25 07:45:28 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 6 (32 texts)
+2026-02-25 07:45:41 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 7 (32 texts)
+2026-02-25 07:45:52 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 8 (32 texts)
+2026-02-25 07:46:04 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 9 (32 texts)
+2026-02-25 07:46:14 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 10 (32 texts)
+2026-02-25 07:46:24 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 11 (32 texts)
+2026-02-25 07:46:34 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 12 (32 texts)
+2026-02-25 07:46:45 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 13 (32 texts)
+2026-02-25 07:46:55 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 14 (32 texts)
+2026-02-25 07:47:06 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 15 (32 texts)
+2026-02-25 07:47:12 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 16 (20 texts)
+2026-02-25 07:47:12 | SUCCESS  | src.etl.loader:process_batch:210 - Prepared 500 points for upload
+2026-02-25 07:47:13 | INFO     | src.db.client:upsert_points:125 - Upserted 500 points to 'real_estate_properties'
+2026-02-25 07:47:13 | INFO     | src.etl.loader:run_pipeline:258 - Batch 71 complete. Progress: Processed: 35500, Embedded: 35500, Uploaded: 35500, Failed: 0
+2026-02-25 07:47:13 | INFO     | src.etl.loader:run_pipeline:242 - Processing batch 72 (500 records)
+2026-02-25 07:47:14 | INFO     | src.etl.loader:process_batch:182 - Generating embeddings for 500 texts
+2026-02-25 07:47:26 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 1 (32 texts)
+2026-02-25 07:47:35 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 2 (32 texts)
+2026-02-25 07:47:45 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 3 (32 texts)
+2026-02-25 07:47:55 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 4 (32 texts)
+2026-02-25 07:48:05 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 5 (32 texts)
+2026-02-25 07:48:15 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 6 (32 texts)
+2026-02-25 07:48:24 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 7 (32 texts)
+2026-02-25 07:48:33 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 8 (32 texts)
+2026-02-25 07:48:43 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 9 (32 texts)
+2026-02-25 07:48:52 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 10 (32 texts)
+2026-02-25 07:49:01 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 11 (32 texts)
+2026-02-25 07:49:11 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 12 (32 texts)
+2026-02-25 07:49:20 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 13 (32 texts)
+2026-02-25 07:49:34 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 14 (32 texts)
+2026-02-25 07:49:44 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 15 (32 texts)
+2026-02-25 07:49:50 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 16 (20 texts)
+2026-02-25 07:49:50 | SUCCESS  | src.etl.loader:process_batch:210 - Prepared 500 points for upload
+2026-02-25 07:49:51 | INFO     | src.db.client:upsert_points:125 - Upserted 500 points to 'real_estate_properties'
+2026-02-25 07:49:51 | INFO     | src.etl.loader:run_pipeline:258 - Batch 72 complete. Progress: Processed: 36000, Embedded: 36000, Uploaded: 36000, Failed: 0
+2026-02-25 07:49:51 | INFO     | src.etl.loader:run_pipeline:242 - Processing batch 73 (500 records)
+2026-02-25 07:49:52 | INFO     | src.etl.loader:process_batch:182 - Generating embeddings for 500 texts
+2026-02-25 07:50:01 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 1 (32 texts)
+2026-02-25 07:50:10 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 2 (32 texts)
+2026-02-25 07:50:21 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 3 (32 texts)
+2026-02-25 07:50:30 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 4 (32 texts)
+2026-02-25 07:50:39 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 5 (32 texts)
+2026-02-25 07:50:49 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 6 (32 texts)
+2026-02-25 07:50:58 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 7 (32 texts)
+2026-02-25 07:51:11 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 8 (32 texts)
+2026-02-25 07:51:21 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 9 (32 texts)
+2026-02-25 07:51:29 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 10 (32 texts)
+2026-02-25 07:51:41 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 11 (32 texts)
+2026-02-25 07:51:52 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 12 (32 texts)
+2026-02-25 07:52:03 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 13 (32 texts)
+2026-02-25 07:52:14 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 14 (32 texts)
+2026-02-25 07:52:26 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 15 (32 texts)
+2026-02-25 07:52:31 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 16 (20 texts)
+2026-02-25 07:52:31 | SUCCESS  | src.etl.loader:process_batch:210 - Prepared 500 points for upload
+2026-02-25 07:52:32 | INFO     | src.db.client:upsert_points:125 - Upserted 500 points to 'real_estate_properties'
+2026-02-25 07:52:32 | INFO     | src.etl.loader:run_pipeline:258 - Batch 73 complete. Progress: Processed: 36500, Embedded: 36500, Uploaded: 36500, Failed: 0
+2026-02-25 07:52:32 | INFO     | src.etl.loader:run_pipeline:242 - Processing batch 74 (500 records)
+2026-02-25 07:52:33 | INFO     | src.etl.loader:process_batch:182 - Generating embeddings for 500 texts
+2026-02-25 07:52:42 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 1 (32 texts)
+2026-02-25 07:52:52 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 2 (32 texts)
+2026-02-25 07:53:02 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 3 (32 texts)
+2026-02-25 07:53:12 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 4 (32 texts)
+2026-02-25 07:53:22 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 5 (32 texts)
+2026-02-25 07:53:32 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 6 (32 texts)
+2026-02-25 07:53:49 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 7 (32 texts)
+2026-02-25 07:54:05 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 8 (32 texts)
+2026-02-25 07:54:23 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 9 (32 texts)
+2026-02-25 07:54:37 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 10 (32 texts)
+2026-02-25 07:54:53 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 11 (32 texts)
+2026-02-25 07:55:07 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 12 (32 texts)
+2026-02-25 07:55:25 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 13 (32 texts)
+2026-02-25 07:55:40 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 14 (32 texts)
+2026-02-25 07:55:52 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 15 (32 texts)
+2026-02-25 07:55:58 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 16 (20 texts)
+2026-02-25 07:55:58 | SUCCESS  | src.etl.loader:process_batch:210 - Prepared 500 points for upload
+2026-02-25 07:55:59 | INFO     | src.db.client:upsert_points:125 - Upserted 500 points to 'real_estate_properties'
+2026-02-25 07:55:59 | INFO     | src.etl.loader:run_pipeline:258 - Batch 74 complete. Progress: Processed: 37000, Embedded: 37000, Uploaded: 37000, Failed: 0
+2026-02-25 07:56:00 | INFO     | src.etl.loader:run_pipeline:242 - Processing batch 75 (500 records)
+2026-02-25 07:57:21 | INFO     | src.etl.loader:process_batch:182 - Generating embeddings for 500 texts
+2026-02-25 08:53:03 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 1 (32 texts)
+2026-02-25 09:01:37 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 2 (32 texts)
+2026-02-25 09:56:50 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 3 (32 texts)
+2026-02-25 10:56:01 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 4 (32 texts)
+2026-02-25 10:57:57 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 5 (32 texts)
+2026-02-25 13:00:05 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 6 (32 texts)
+2026-02-25 14:01:17 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 7 (32 texts)
+2026-02-25 16:03:28 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 8 (32 texts)
+2026-02-25 18:05:41 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 9 (32 texts)
+2026-02-25 18:28:16 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 10 (32 texts)
+2026-02-25 19:39:59 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 11 (32 texts)
+2026-02-25 19:40:09 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 12 (32 texts)
+2026-02-25 19:47:17 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 13 (32 texts)
+2026-02-25 19:47:28 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 14 (32 texts)
+2026-02-25 19:47:38 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 15 (32 texts)
+2026-02-25 19:48:29 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 16 (20 texts)
+2026-02-25 19:48:29 | SUCCESS  | src.etl.loader:process_batch:210 - Prepared 500 points for upload
+2026-02-25 19:48:30 | INFO     | src.db.client:upsert_points:125 - Upserted 500 points to 'real_estate_properties'
+2026-02-25 19:48:30 | INFO     | src.etl.loader:run_pipeline:258 - Batch 75 complete. Progress: Processed: 37500, Embedded: 37500, Uploaded: 37500, Failed: 0
+2026-02-25 19:48:30 | INFO     | src.etl.loader:run_pipeline:242 - Processing batch 76 (500 records)
+2026-02-25 19:48:31 | INFO     | src.etl.loader:process_batch:182 - Generating embeddings for 500 texts
+2026-02-25 19:48:42 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 1 (32 texts)
+2026-02-25 19:48:51 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 2 (32 texts)
+2026-02-25 19:57:09 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 3 (32 texts)
+2026-02-25 19:57:18 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 4 (32 texts)
+2026-02-25 20:07:51 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 5 (32 texts)
+2026-02-25 20:08:02 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 6 (32 texts)
+2026-02-25 20:08:11 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 7 (32 texts)
+2026-02-25 21:09:08 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 8 (32 texts)
+2026-02-25 21:09:19 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 9 (32 texts)
+2026-02-25 21:09:28 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 10 (32 texts)
+2026-02-25 22:10:19 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 11 (32 texts)
+2026-02-25 22:10:28 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 12 (32 texts)
+2026-02-25 22:10:37 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 13 (32 texts)
+2026-02-25 23:06:45 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 14 (32 texts)
+2026-02-25 23:06:57 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 15 (32 texts)
+2026-02-25 23:07:04 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 16 (20 texts)
+2026-02-25 23:07:04 | SUCCESS  | src.etl.loader:process_batch:210 - Prepared 500 points for upload
+2026-02-25 23:07:05 | INFO     | src.db.client:upsert_points:125 - Upserted 500 points to 'real_estate_properties'
+2026-02-25 23:07:05 | INFO     | src.etl.loader:run_pipeline:258 - Batch 76 complete. Progress: Processed: 38000, Embedded: 38000, Uploaded: 38000, Failed: 0
+2026-02-25 23:07:05 | INFO     | src.etl.loader:run_pipeline:242 - Processing batch 77 (411 records)
+2026-02-26 00:07:11 | INFO     | src.etl.loader:process_batch:182 - Generating embeddings for 411 texts
+2026-02-26 01:08:32 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 1 (32 texts)
+2026-02-26 04:36:36 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 2 (32 texts)
+2026-02-26 07:45:37 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 3 (32 texts)
+2026-02-26 07:45:56 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 4 (32 texts)
+2026-02-26 09:46:51 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 5 (32 texts)
+2026-02-26 10:54:35 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 6 (32 texts)
+2026-02-26 12:50:17 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 7 (32 texts)
+2026-02-26 15:53:34 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 8 (32 texts)
+2026-02-26 16:54:51 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 9 (32 texts)
+2026-02-26 18:57:10 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 10 (32 texts)
+2026-02-26 19:07:51 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 11 (32 texts)
+2026-02-26 19:47:18 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 12 (32 texts)
+2026-02-26 19:58:14 | INFO     | src.services.embedder:embed_batch:117 - Processed embeddings batch 13 (27 texts)
+2026-02-26 19:58:15 | SUCCESS  | src.etl.loader:process_batch:210 - Prepared 411 points for upload
+2026-02-26 19:58:16 | INFO     | src.db.client:upsert_points:125 - Upserted 411 points to 'real_estate_properties'
+2026-02-26 19:58:16 | INFO     | src.etl.loader:run_pipeline:258 - Batch 77 complete. Progress: Processed: 38411, Embedded: 38411, Uploaded: 38411, Failed: 0
+2026-02-26 19:58:16 | SUCCESS  | src.etl.loader:run_pipeline:265 - 🎉 ETL Pipeline completed successfully!
+2026-02-26 19:58:16 | INFO     | src.etl.loader:run_pipeline:269 - Total Records Processed: 38411
+2026-02-26 19:58:16 | INFO     | src.etl.loader:run_pipeline:269 - Successfully Embedded: 38411
+2026-02-26 19:58:16 | INFO     | src.etl.loader:run_pipeline:269 - Successfully Uploaded: 38411
+2026-02-26 19:58:16 | INFO     | src.etl.loader:run_pipeline:269 - Failed Records: 0
+2026-02-26 19:58:16 | INFO     | src.etl.loader:run_pipeline:269 - Batches Processed: 77
+2026-02-26 19:58:16 | INFO     | src.etl.loader:run_pipeline:269 - Success Rate: 100.0%
+2026-02-26 19:58:16 | INFO     | src.etl.loader:run_pipeline:269 - Collection Name: real_estate_properties
+2026-02-26 19:58:16 | INFO     | src.etl.loader:run_pipeline:269 - Embedding Model: jinaai/jina-embeddings-v2-base-es
+2026-02-26 19:58:16 | INFO     | src.etl.loader:run_pipeline:269 - Vector Dimension: 768
+2026-02-26 19:58:16 | INFO     | __main__:run_etl_pipeline:113 - ============================================================
+2026-02-26 19:58:16 | INFO     | __main__:run_etl_pipeline:114 - 🎉 ETL PIPELINE COMPLETED SUCCESSFULLY
+2026-02-26 19:58:16 | INFO     | __main__:run_etl_pipeline:115 - ============================================================
+2026-02-26 19:58:16 | INFO     | __main__:run_etl_pipeline:116 - ⏱️  Total Execution Time: 267133.3 seconds (4452.2 minutes)
+2026-02-26 19:58:16 | INFO     | __main__:run_etl_pipeline:117 - 📊 Records per Second: 0.1
+2026-02-26 19:58:16 | INFO     | __main__:run_etl_pipeline:118 - ============================================================
+2026-02-26 19:58:16 | INFO     | __main__:run_etl_pipeline:124 - ✅ Collection 'real_estate_properties' now contains 38411 vectors

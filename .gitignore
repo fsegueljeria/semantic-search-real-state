@@ -1,3 +1,5 @@
 /models_cache
 .venv/
 node_modules/
+etl_pipeline.log
+*.log
