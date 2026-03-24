@@ -90,18 +90,31 @@ def verify_dependencies() -> bool:
         return False
 
 
-def run_etl_pipeline(recreate_collection: bool = False, skip_rows: int = 0) -> None:
+def run_etl_pipeline(
+    recreate_collection: bool = False,
+    skip_rows: int = 0,
+    use_versioned_collection: bool = False,
+    switch_alias: bool = False,
+) -> None:
     """Run the complete ETL pipeline."""
     start_time = time.time()
     
     try:
+        target_collection = settings.qdrant_collection_name
+        if use_versioned_collection:
+            target_collection = qdrant.build_versioned_collection_name(
+                settings.qdrant_collection_name,
+                settings.qdrant_collection_version_suffix,
+            )
+            logger.info(f"Using versioned target collection: {target_collection}")
+
         if recreate_collection:
-            logger.warning(f"Recreate requested: deleting collection '{settings.qdrant_collection_name}'")
-            if not qdrant.delete_collection(settings.qdrant_collection_name):
+            logger.warning(f"Recreate requested: deleting collection '{target_collection}'")
+            if not qdrant.delete_collection(target_collection):
                 raise RuntimeError("Failed to delete collection")
         
         # Initialize pipeline
-        loader = ETLLoader(skip_rows=skip_rows)
+        loader = ETLLoader(skip_rows=skip_rows, target_collection=target_collection)
         
         # Run pipeline
         final_stats = loader.run_pipeline()
@@ -118,10 +131,17 @@ def run_etl_pipeline(recreate_collection: bool = False, skip_rows: int = 0) -> N
         logger.info("="*60)
         
         # Verify collection
-        collection_info = qdrant.get_collection_info(settings.qdrant_collection_name)
+        collection_info = qdrant.get_collection_info(target_collection)
         if collection_info:
             points_count = collection_info.points_count
-            logger.info(f"✅ Collection '{settings.qdrant_collection_name}' now contains {points_count} vectors")
+            logger.info(f"✅ Collection '{target_collection}' now contains {points_count} vectors")
+
+        if switch_alias:
+            logger.info(
+                f"Switching alias '{settings.qdrant_collection_alias}' -> '{target_collection}'"
+            )
+            if not qdrant.switch_alias_atomically(settings.qdrant_collection_alias, target_collection):
+                raise RuntimeError("Failed to switch collection alias")
         
     except Exception as e:
         logger.error(f"💥 Pipeline failed: {e}")
@@ -147,6 +167,16 @@ def main() -> None:
         default=0,
         help="Skip first N parsed rows from CSV (resume interrupted loads without duplicating).",
     )
+    parser.add_argument(
+        "--use-versioned-collection",
+        action="store_true",
+        help="Load into <collection>_<version_suffix> instead of base collection.",
+    )
+    parser.add_argument(
+        "--switch-alias",
+        action="store_true",
+        help="Switch active alias to target collection after successful ETL run.",
+    )
     args = parser.parse_args()
     
     setup_logging()
@@ -160,6 +190,10 @@ def main() -> None:
         logger.info("🔄 Mode: --recreate (will delete collection and reload)")
     if args.skip_rows > 0:
         logger.info(f"⏭️  Mode: --skip-rows {args.skip_rows} (resume load)")
+    if args.use_versioned_collection:
+        logger.info(f"🧩 Mode: versioned collection suffix '{settings.qdrant_collection_version_suffix}'")
+    if args.switch_alias:
+        logger.info(f"🔀 Mode: will switch alias '{settings.qdrant_collection_alias}' on success")
     
     # Verify environment
     if not verify_dependencies():
@@ -175,7 +209,12 @@ def main() -> None:
             sys.exit(0)
     
     # Run pipeline
-    run_etl_pipeline(recreate_collection=args.recreate, skip_rows=args.skip_rows)
+    run_etl_pipeline(
+        recreate_collection=args.recreate,
+        skip_rows=args.skip_rows,
+        use_versioned_collection=args.use_versioned_collection,
+        switch_alias=args.switch_alias,
+    )
 
 
 if __name__ == "__main__":

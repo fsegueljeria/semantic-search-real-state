@@ -104,3 +104,41 @@ The following modules are ready to be implemented:
 3. Data cleaning pipeline (`src/etl/cleaner.py`)
 4. Batch loader (`src/etl/loader.py`)
 5. Main ETL orchestrator (`src/etl/main.py`)
+
+## Migration / Rollout Controls
+
+The project now includes feature flags for phased migration:
+
+- `ENABLE_TWO_STAGE_RANKING`: retrieve wider candidate set and rerank.
+- `ENABLE_CROSS_ENCODER_RERANK`: enable cross-encoder reranking (optional dependency).
+- `ENABLE_SPARSE_DENSE_HYBRID`: activate true sparse+dense hybrid retrieval in Qdrant.
+- `HYBRID_ALPHA`: dense weight for hybrid blend.
+
+Collection rollout is now alias-driven:
+
+- Active alias: `QDRANT_COLLECTION_ALIAS` (default `real_estate_properties_current`)
+- Versioned collection target: `QDRANT_COLLECTION_NAME + "_" + QDRANT_COLLECTION_VERSION_SUFFIX`
+
+ETL commands:
+
+```bash
+# Load into versioned collection (e.g. real_estate_properties_v2)
+python -m src.etl.main --use-versioned-collection -y
+
+# After validating, atomically switch alias to this collection
+python -m src.etl.main --use-versioned-collection --switch-alias -y
+```
+
+Offline baseline and evaluation:
+
+```bash
+python scripts/capture_baseline.py --top-k 5
+python scripts/eval_relevance.py --top-k 5
+```
+
+Hybrid indexing notes:
+
+- ETL now writes named vectors per point:
+  - `dense`: dense embedding vector
+  - `sparse`: hash-based sparse vector
+- Qdrant collections are created with both vector spaces, enabling hybrid retrieval.

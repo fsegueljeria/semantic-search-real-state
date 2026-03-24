@@ -51,6 +51,67 @@ class ETLSettings(BaseSettings):
         default="real_estate_properties",
         description="Name of the Qdrant collection"
     )
+    qdrant_collection_alias: str = Field(
+        default="real_estate_properties_current",
+        description="Alias used as active production collection"
+    )
+    qdrant_collection_version_suffix: str = Field(
+        default="v2",
+        description="Version suffix used when creating new collection versions"
+    )
+
+    # Search Pipeline Configuration
+    top_k_final: int = Field(default=5, description="Final results returned to user")
+    top_k_retrieval: int = Field(default=100, description="Candidates retrieved from vector DB")
+    score_threshold: float = Field(default=0.0, description="Minimum dense score accepted")
+    enable_two_stage_ranking: bool = Field(
+        default=False,
+        description="Enable two-stage retrieval + reranking pipeline"
+    )
+    enable_cross_encoder_rerank: bool = Field(
+        default=False,
+        description="Enable cross-encoder reranking when available"
+    )
+    enable_sparse_dense_hybrid: bool = Field(
+        default=False,
+        description="Enable hybrid dense+sparse score combination"
+    )
+    hybrid_alpha: float = Field(
+        default=0.7,
+        description="Weight for dense score in final blend (0-1)"
+    )
+    sparse_hash_space: int = Field(
+        default=1048576,
+        description="Hash space used by sparse hashing vectorizer"
+    )
+    sparse_min_token_length: int = Field(
+        default=3,
+        description="Minimum token length to include in sparse vectors"
+    )
+
+    # ETL Derived Metadata
+    enable_llm_batch_enrichment: bool = Field(
+        default=False,
+        description="Use LLM for metadata enrichment during ETL"
+    )
+    llm_enrichment_provider: str = Field(
+        default="openai",
+        description="Provider for metadata enrichment"
+    )
+    llm_enrichment_model: str = Field(
+        default="gpt-4o-mini",
+        description="Model name for ETL metadata enrichment"
+    )
+    llm_enrichment_api_key: Optional[str] = Field(
+        default=None,
+        description="API key used by ETL enrichment provider"
+    )
+
+    # Optional online/online evaluation
+    enable_query_telemetry: bool = Field(
+        default=True,
+        description="Capture and expose per-stage query telemetry"
+    )
     
     # Logging
     log_level: str = Field(default="INFO", description="Logging level")

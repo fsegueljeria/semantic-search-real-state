@@ -3,3 +3,4 @@
 node_modules/
 etl_pipeline.log
 *.log
+.pycache_local/
