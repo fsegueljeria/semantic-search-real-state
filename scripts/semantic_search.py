@@ -23,8 +23,7 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(PROJECT_ROOT))
 
 from config.settings import settings
-from src.db.client import qdrant
-from src.services.embedder import embedder
+from src.services.search_pipeline import search_pipeline
 
 
 def format_result(hit, index: int):
@@ -430,6 +429,52 @@ def _extract_piso_filters(query: str) -> tuple[str, Dict[str, Any]]:
     return query_clean, filters
 
 
+def _extract_niveles_propiedad_filters(
+    query: str,
+    tipo_propiedad: Optional[str] = None,
+) -> tuple[str, Dict[str, Any]]:
+    """
+    Extrae filtro por niveles de una casa (no confundir con piso de departamento).
+    Soporta variantes:
+    - "casa de 1 piso", "casa un piso", "1 piso"
+    - "2 pisos", "dos niveles", "tres plantas"
+    """
+    filters: Dict[str, Any] = {}
+    query_clean = query
+    qn = _normalize_text(query)
+
+    # Aplicar solo si es casa o si el texto sugiere casa.
+    is_house_context = (tipo_propiedad == "casa") or ("casa" in qn)
+    if not is_house_context:
+        return query_clean, filters
+
+    level_map = {
+        "1": 1, "un": 1, "una": 1, "primer": 1, "primero": 1,
+        "2": 2, "dos": 2, "segundo": 2,
+        "3": 3, "tres": 3, "tercer": 3, "tercero": 3,
+    }
+    level_tokens = r"(1|2|3|un|una|dos|tres|primer|primero|segundo|tercer|tercero)"
+    unit_tokens = r"(?:piso|pisos|nivel|niveles|planta|plantas)"
+
+    patterns = [
+        rf"\bde\s+{level_tokens}\s+{unit_tokens}\b",
+        rf"\b{level_tokens}\s+{unit_tokens}\b",
+        rf"\bcasa\s+(?:de\s+)?{level_tokens}\s+{unit_tokens}\b",
+    ]
+
+    for pattern in patterns:
+        m = re.search(pattern, qn)
+        if m:
+            raw = m.group(1)
+            parsed = level_map.get(raw, 0)
+            if parsed > 0:
+                filters["niveles_propiedad"] = parsed
+                query_clean = re.sub(pattern, "", query_clean, flags=re.IGNORECASE)
+                return query_clean, filters
+
+    return query_clean, filters
+
+
 def _extract_gastos_comunes_filters(query: str) -> tuple[str, Dict[str, Any]]:
     """
     Extrae filtros por gastos comunes (en pesos).
@@ -566,6 +611,14 @@ def extract_filters(query: str) -> tuple[str, Dict[str, Any]]:
             filters["dormitorios"] = int(dorm_match.group(1))
             words_to_remove.append(dorm_match.group(0))
 
+    # Niveles de casa (ej. "1 piso", "dos pisos")
+    query, niveles_filter = _extract_niveles_propiedad_filters(
+        query,
+        tipo_propiedad=filters.get("tipo_propiedad"),
+    )
+    if "niveles_propiedad" in niveles_filter:
+        filters.update(niveles_filter)
+
     # Rango de precio UF (entre X y Y UF, o X-Y UF)
     query, uf_filter = _extract_uf_range(query)
     if "precio_uf" in uf_filter:
@@ -632,16 +685,13 @@ def search(query: str, top_k: int = 5):
     print(f"📊 Mostrando top {top_k} resultados más relevantes\n")
     
     try:
-        # Generar embedding de la consulta limpia
-        query_vector = embedder.embed_text(query_clean if query_clean else query)
-        
-        # Buscar en Qdrant con filtros
-        results = qdrant.search_similar(
-            collection_name=settings.qdrant_collection_name,
-            query_vector=query_vector,
-            limit=top_k,
-            metadata_filter=filters if filters else None,
+        response = search_pipeline.search(
+            query=query,
+            top_k_final=top_k,
+            top_k_retrieval=settings.top_k_retrieval,
+            score_threshold=settings.score_threshold,
         )
+        results = response["results"]
         
         if not results:
             print("❌ No se encontraron resultados que coincidan con los filtros.")
@@ -650,6 +700,8 @@ def search(query: str, top_k: int = 5):
             return
         
         print(f"✅ Encontradas {len(results)} propiedades similares:\n")
+        if response.get("telemetry"):
+            print(f"⏱️  Telemetry: {response['telemetry']}")
         
         for i, hit in enumerate(results, 1):
             format_result(hit, i)

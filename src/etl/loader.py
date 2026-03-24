@@ -24,17 +24,24 @@ sys.path.insert(0, str(project_root))
 from config.settings import settings
 from src.db.client import qdrant
 from src.services.embedder import embedder
+from src.services.sparse_embedder import sparse_embedder
 from src.etl.cleaner import DataCleaner
 
 
 class ETLLoader:
     """Main ETL pipeline for processing and loading real estate data."""
     
-    def __init__(self, csv_path: Path = None, batch_size: int = None, skip_rows: int = 0):
+    def __init__(
+        self,
+        csv_path: Path = None,
+        batch_size: int = None,
+        skip_rows: int = 0,
+        target_collection: str = None,
+    ):
         self.csv_path = csv_path or settings.csv_file_path
         self.batch_size = batch_size or settings.batch_size
         self.skip_rows = max(0, int(skip_rows or 0))
-        self.collection_name = settings.qdrant_collection_name
+        self.collection_name = target_collection or settings.qdrant_collection_name
         
         # Initialize components
         self.cleaner = DataCleaner()
@@ -181,13 +188,21 @@ class ETLLoader:
         # Generate embeddings for the batch
         logger.info(f"Generating embeddings for {len(batch_texts)} texts")
         batch_embeddings = embedder.embed_batch(batch_texts, batch_size=32)
+        batch_sparse_embeddings = sparse_embedder.embed_batch(batch_texts)
         
         if len(batch_embeddings) != len(batch_texts):
-            logger.error(f"Embedding count mismatch: {len(batch_embeddings)} vs {len(batch_texts)}")
+            logger.error(f"Dense embedding count mismatch: {len(batch_embeddings)} vs {len(batch_texts)}")
+            return points
+        if len(batch_sparse_embeddings) != len(batch_texts):
+            logger.error(
+                f"Sparse embedding count mismatch: {len(batch_sparse_embeddings)} vs {len(batch_texts)}"
+            )
             return points
         
         # Create Qdrant points
-        for i, (embedding, metadata) in enumerate(zip(batch_embeddings, batch_metadata)):
+        for i, (embedding, sparse_embedding, metadata) in enumerate(
+            zip(batch_embeddings, batch_sparse_embeddings, batch_metadata)
+        ):
             try:
                 # Generate unique ID (using original index for consistency)
                 point_id = str(uuid.uuid4())
@@ -195,7 +210,10 @@ class ETLLoader:
                 # Create point
                 point = PointStruct(
                     id=point_id,
-                    vector=embedding,
+                    vector={
+                        "dense": embedding,
+                        "sparse": sparse_embedding,
+                    },
                     payload=metadata,
                 )
                 

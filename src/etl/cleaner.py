@@ -8,6 +8,7 @@ Utilities for cleaning and preparing real estate data for vector indexing.
 import re
 import json
 import sys
+import urllib.request
 from typing import Dict, Any, Optional, List
 import pandas as pd
 import numpy as np
@@ -206,6 +207,112 @@ class DataCleaner:
             semantic_text = semantic_text[:2000] + "..."
         
         return semantic_text
+
+    @staticmethod
+    def _infer_derived_attributes_rule_based(text: str, tipo_propiedad: str) -> Dict[str, Any]:
+        """Infer metadata derived from title + description using deterministic rules."""
+        normalized = DataCleaner.clean_string(text).lower()
+        attrs: Dict[str, Any] = {
+            "niveles_propiedad": 0,
+            "tiene_piscina": False,
+            "tiene_quincho": False,
+            "tiene_jardin": False,
+            "es_amoblado": False,
+            "estado_propiedad": "desconocido",
+        }
+
+        # niveles_propiedad only applies mainly to houses; keep 0 when unknown.
+        if tipo_propiedad.lower() == "casa":
+            # Direct explicit mentions.
+            if re.search(r"\b(de\s+)?(un|una|1)\s+(piso|nivel|planta)\b", normalized):
+                attrs["niveles_propiedad"] = 1
+            elif re.search(r"\b(de\s+)?(dos|2)\s+(pisos|niveles|plantas)\b", normalized):
+                attrs["niveles_propiedad"] = 2
+            elif re.search(r"\b(de\s+)?(tres|3)\s+(pisos|niveles|plantas)\b", normalized):
+                attrs["niveles_propiedad"] = 3
+            else:
+                # Infer from explicit floor section markers in descriptions.
+                has_primer = bool(re.search(r"\b(primer|1er)\s+piso\b", normalized))
+                has_segundo = bool(re.search(r"\b(segundo|2do)\s+piso\b", normalized))
+                has_tercer = bool(re.search(r"\b(tercer|tercero|3er)\s+piso\b", normalized))
+                if has_tercer:
+                    attrs["niveles_propiedad"] = 3
+                elif has_segundo and has_primer:
+                    attrs["niveles_propiedad"] = 2
+                elif has_primer:
+                    attrs["niveles_propiedad"] = 1
+
+        attrs["tiene_piscina"] = bool(
+            re.search(r"\b(con\s+)?piscina\b", normalized)
+            and not re.search(r"\b(proyecto|espacio|para)\s+(de\s+)?piscina\b", normalized)
+        )
+        attrs["tiene_quincho"] = bool(re.search(r"\b(con\s+)?quincho\b", normalized))
+        attrs["tiene_jardin"] = bool(re.search(r"\b(jardin|jard[ií]n)\b", normalized))
+        attrs["es_amoblado"] = bool(re.search(r"\b(amoblado|amueblado|full\s+amoblado)\b", normalized))
+
+        if re.search(r"\b(nuevo|nueva|a\s+estrenar)\b", normalized):
+            attrs["estado_propiedad"] = "nueva"
+        elif re.search(r"\b(remodelad[oa]|renovad[oa])\b", normalized):
+            attrs["estado_propiedad"] = "remodelada"
+        elif re.search(r"\b(a\s+remodelar|para\s+remodelar)\b", normalized):
+            attrs["estado_propiedad"] = "a_remodelar"
+
+        return attrs
+
+    @staticmethod
+    def _infer_derived_attributes_llm(text: str, tipo_propiedad: str) -> Dict[str, Any]:
+        """
+        Optional LLM extractor for derived attributes.
+        Uses OpenAI-compatible REST when enabled by environment settings.
+        """
+        if not settings.enable_llm_batch_enrichment or not settings.llm_enrichment_api_key:
+            return {}
+        if settings.llm_enrichment_provider.lower() != "openai":
+            return {}
+
+        prompt = (
+            "Extrae atributos inmobiliarios en JSON estricto con este esquema: "
+            '{"niveles_propiedad": int, "tiene_piscina": bool, "tiene_quincho": bool, '
+            '"tiene_jardin": bool, "es_amoblado": bool, '
+            '"estado_propiedad": "nueva|remodelada|a_remodelar|desconocido"}. '
+            "Usa 0 para niveles_propiedad cuando no se pueda inferir. "
+            f"Tipo de propiedad: {tipo_propiedad}. "
+            f"Texto: {text[:1800]}"
+        )
+        payload = {
+            "model": settings.llm_enrichment_model,
+            "response_format": {"type": "json_object"},
+            "messages": [
+                {"role": "system", "content": "Responde solo JSON válido."},
+                {"role": "user", "content": prompt},
+            ],
+            "temperature": 0,
+        }
+        req = urllib.request.Request(
+            "https://api.openai.com/v1/chat/completions",
+            data=json.dumps(payload).encode("utf-8"),
+            headers={
+                "Content-Type": "application/json",
+                "Authorization": f"Bearer {settings.llm_enrichment_api_key}",
+            },
+            method="POST",
+        )
+        try:
+            with urllib.request.urlopen(req, timeout=20) as resp:
+                body = json.loads(resp.read().decode("utf-8"))
+            content = body["choices"][0]["message"]["content"]
+            parsed = json.loads(content)
+            return {
+                "niveles_propiedad": int(parsed.get("niveles_propiedad", 0) or 0),
+                "tiene_piscina": bool(parsed.get("tiene_piscina", False)),
+                "tiene_quincho": bool(parsed.get("tiene_quincho", False)),
+                "tiene_jardin": bool(parsed.get("tiene_jardin", False)),
+                "es_amoblado": bool(parsed.get("es_amoblado", False)),
+                "estado_propiedad": str(parsed.get("estado_propiedad", "desconocido")),
+            }
+        except Exception as exc:
+            logger.debug(f"LLM enrichment failed, keeping deterministic attributes: {exc}")
+            return {}
     
     @staticmethod
     def prepare_metadata(row: pd.Series) -> Dict[str, Any]:
@@ -244,6 +351,20 @@ class DataCleaner:
         # Text fields
         metadata['titulo'] = DataCleaner.clean_string(row.get('TITULO_PROPIEDAD', ''))[:500]
         metadata['descripcion'] = DataCleaner.clean_string(row.get('DESCRIPCION', ''))
+
+        # Derived attributes from descriptive text
+        derived_text = f"{metadata['titulo']} {metadata['descripcion']}".strip()
+        derived = DataCleaner._infer_derived_attributes_rule_based(
+            text=derived_text,
+            tipo_propiedad=metadata["tipo_propiedad"],
+        )
+        llm_derived = DataCleaner._infer_derived_attributes_llm(
+            text=derived_text,
+            tipo_propiedad=metadata["tipo_propiedad"],
+        )
+        if llm_derived:
+            derived.update(llm_derived)
+        metadata.update(derived)
         
         # Images
         metadata['images'] = DataCleaner.parse_images_json(row.get('IMAGES'))

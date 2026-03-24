@@ -14,9 +14,7 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(PROJECT_ROOT))
 
 from config.settings import settings
-from scripts.semantic_search import extract_filters
-from src.db.client import qdrant
-from src.services.embedder import embedder
+from src.services.search_pipeline import search_pipeline
 
 
 def _get_score_and_payload(hit: Any) -> Tuple[float, Dict[str, Any]]:
@@ -49,30 +47,28 @@ def _normalize_images(images: Any) -> List[str]:
 
 
 def _search_properties(query: str, top_k: int, score_threshold: float) -> Dict[str, Any]:
-    """Ejecuta búsqueda semántica + filtros sobre Qdrant."""
-    query_clean, filters = extract_filters(query)
-    vector = embedder.embed_text(query_clean if query_clean else query)
-
-    results = qdrant.search_similar(
-        collection_name=settings.qdrant_collection_name,
-        query_vector=vector,
-        limit=top_k,
-        metadata_filter=filters if filters else None,
-        score_threshold=score_threshold if score_threshold > 0 else None,
+    """Ejecuta búsqueda usando el pipeline modular con feature flags."""
+    response = search_pipeline.search(
+        query=query,
+        top_k_final=top_k,
+        top_k_retrieval=settings.top_k_retrieval,
+        score_threshold=score_threshold,
     )
-
     normalized_results = []
-    for hit in results:
+    for hit in response["results"]:
         score, payload = _get_score_and_payload(hit)
         payload["images"] = _normalize_images(payload.get("images"))
-        normalized_results.append({"score": score, "payload": payload})
-
-    return {
-        "query": query,
-        "query_clean": query_clean,
-        "filters": filters,
-        "results": normalized_results,
-    }
+        normalized_results.append(
+            {
+                "score": score,
+                "payload": payload,
+                "dense_score": hit.get("dense_score", score),
+                "sparse_score": hit.get("sparse_score", 0.0),
+                "rerank_score": hit.get("rerank_score", 0.0),
+            }
+        )
+    response["results"] = normalized_results
+    return response
 
 
 # Altura del placeholder cuando no hay imagen; tarjetas por fila en la cuadrícula
@@ -186,6 +182,8 @@ def main() -> None:
     with st.sidebar:
         st.subheader("Configuración")
         top_k = st.slider("Cantidad de resultados", min_value=3, max_value=15, value=5)
+        if settings.enable_two_stage_ranking:
+            st.caption(f"Top-K retrieval: {settings.top_k_retrieval} candidatos")
         score_threshold = st.slider(
             "Umbral mínimo de relevancia",
             min_value=0.0,
@@ -193,7 +191,7 @@ def main() -> None:
             value=0.0,
             step=0.05,
         )
-        st.caption(f"Colección activa: `{settings.qdrant_collection_name}`")
+        st.caption(f"Colección activa (alias): `{settings.qdrant_collection_alias}`")
         st.caption(f"Modelo embeddings: `{settings.embedding_model}`")
 
     if "history" not in st.session_state:
@@ -209,6 +207,8 @@ def main() -> None:
             )
             if turn["filters"]:
                 st.caption(f"Filtros: {turn['filters']}")
+            if turn.get("telemetry"):
+                st.caption(f"Telemetry: {turn['telemetry']}")
             st.markdown("---")
             # Cuadrícula de tarjetas compactas (varias por fila)
             for start in range(0, n, CARDS_PER_ROW):
@@ -242,6 +242,8 @@ def main() -> None:
             )
             if response["filters"]:
                 st.caption(f"Filtros: {response['filters']}")
+            if response.get("telemetry"):
+                st.caption(f"Telemetry: {response['telemetry']}")
             st.markdown("---")
             # Cuadrícula de tarjetas compactas (misma key que cuando esté en history,
             # para que los botones del carrusel sigan funcionando tras el re-run)
